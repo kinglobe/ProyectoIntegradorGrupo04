@@ -6,11 +6,11 @@ Trabajan en estrecha colaboración con los artesanos locales, brindándoles apoy
 
 ## INTEGRANTES
 
-_ Maximiliano Assel, Edad: 38, ciudad: San Miguel.
-_ Hugo Avallay, edad: 37, Ciudad:La Rioja/Capital.
-_ Matias Martinez, edad: 36, Ciudad: Lugano
-_ Francisco Toledo, edad: 25, ciudad: San Miguel.
-_ Omar Zerpa, edad : 31. Ciudad : Capital.
+- Maximiliano Assel, Edad: 38, ciudad: San Miguel.
+- Hugo Avallay, edad: 37, Ciudad:La Rioja/Capital.
+- Matias Martinez, edad: 36, Ciudad: Lugano
+- Francisco Toledo, edad: 25, ciudad: San Miguel.
+- Omar Zerpa, edad : 31. Ciudad : Capital.
 
 
 ## PÁGINAS QUE USAMOS COMO INSPIRACIÓN
