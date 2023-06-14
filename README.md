@@ -10,8 +10,26 @@ Trabajan en estrecha colaboración con los artesanos locales, brindándoles apoy
 - Hugo Avallay, edad: 37, Ciudad:La Rioja/Capital.
 - Matias Martinez, edad: 36, Ciudad: Lugano
 - Francisco Toledo, edad: 25, ciudad: San Miguel.
-- Omar Zerpa, edad : 31. Ciudad : Capital.
+- Omar Zerpa, edad : 32. Ciudad : Capital.
 
 
 ## PÁGINAS QUE USAMOS COMO INSPIRACIÓN
+
+## Sitios por los productos o servicios que ofrecen:
+
+- https://www.visiongourmet.com.ar/productos-regionales/
+
+
+## Sitios por los clientes que apuntan:
+
+-
+
+
+## Sitios por la estetica que presenta:
+
+- https://www.thefreshmarket.com.ar/
+
+## Sitios por las funcionalidades implementada:
+
+- https://www.argentinaencasa.com/
 
