@@ -22,12 +22,14 @@ Trabajan en estrecha colaboración con los artesanos locales, brindándoles apoy
 
 ## Sitios por los clientes que apuntan:
 
--
+- https://saborasur.com.ar/
 
 
 ## Sitios por la estetica que presenta:
 
 - https://www.thefreshmarket.com.ar/
+
+- https://littleitaliamarket.com.ar/
 
 ## Sitios por las funcionalidades implementada:
 
