@@ -5,6 +5,7 @@ Los productos están orientados a turistas tanto locales como extranjeros y ciud
 Trabajan en estrecha colaboración con los artesanos locales, brindándoles apoyo y promoviendo su talento, esto permite, también, proveer productos a locales gastronómicos de todo el país.
 
 ## INTEGRANTES
+Los cinco integrantes del grupo somos estudiantes del curso de Programacion web full stack que dicta la fundacion formar en conjunto con digital house. 
 
 - Maximiliano Assel, Edad: 38, ciudad: San Miguel.
 - Hugo Avallay, edad: 37, Ciudad:La Rioja/Capital.
