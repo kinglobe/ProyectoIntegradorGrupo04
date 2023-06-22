@@ -22,10 +22,16 @@ Los cinco integrantes del grupo somos estudiantes del curso de Programacion web 
 
 - https://www.casadeuco.com/
 
+- https://puertadelabra.com.ar/
+
 
 ## Sitios por los clientes que apuntan:
 
 - https://saborasur.com.ar/
+
+- https://www.visiongourmet.com.ar/productos-regionales/ <!-- apunta a un publico en general, tratando de llegar al turista y competir en el mercado interno -->
+
+- https://www.deliargentina.com/articulos-regionales-argentinos <!-- apunta a un publico en general, tratando de llegar al turista y competir en el mercado interno -->
 
 
 ## Sitios por la estetica que presenta:
