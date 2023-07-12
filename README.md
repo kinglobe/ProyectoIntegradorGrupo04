@@ -1,4 +1,8 @@
-# ALMACÉN REGIONAL
+<p align="center">
+  <a href=https://github.com/kinglobe/grupo_4_almacenRegional>
+    <img src=https://github.com/kinglobe/grupo_4_almacenRegional/blob/ee540ae599a84a666455ff5c4059520bf7a71cf9/wireframes/logoAlmacen.png alt="logo" width="250" height="250">
+  </a>
+</p>
 
 Almacén Regional es un proyecto que busca transmitir la esencia argentina a través de sus productos. Vinos, licores,aceites, dulces, quesos, yerbas, especias, artesanías son solo algunos de los productos que podemos encontrar en la tienda.
 Los productos están orientados a turistas tanto locales como extranjeros y ciudadanos en general que buscan conectarse con las culturas de otras regiones del país.
