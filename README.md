@@ -13,7 +13,7 @@ Los cinco integrantes del grupo somos estudiantes del curso de Programacion web 
 
 - Maximiliano Assel, Edad: 38, ciudad: San Miguel.
 - Hugo Avallay, edad: 37, Ciudad:La Rioja/Capital.
-- Matias Martinez, edad: 36, Ciudad: Lugano
+- Matias Martinez, edad: 36, Ciudad: V Lugano
 - Francisco Toledo, edad: 25, ciudad: San Miguel.
 - Omar Zerpa, edad : 32. Ciudad : Capital.
 
