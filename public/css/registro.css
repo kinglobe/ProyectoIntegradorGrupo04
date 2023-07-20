@@ -1,0 +1,7 @@
+.registro__body{
+    background-color: var(--colornaranja);
+}
+.registro__main--title{
+    background-color: var(--colorCuarzo);
+    color: var(--colorNaranjaGris);
+}
