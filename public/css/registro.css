@@ -1,7 +1,38 @@
 .registro__body{
     background-color: var(--colornaranja);
 }
-.registro__main--title{
+.registro__main{
     background-color: var(--colorCuarzo);
     color: var(--colorNaranjaGris);
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.registro__main h2{
+
+}
+.registro__main--subt {
+
+}
+
+.registro__main--sesion{
+background-color: var(--colorMusgo);
+border: none;
+border-radius: 5%;
+color: var(--colorNaranjaGris);
+padding: 15px;
+margin-top: 10px;
+}
+
+.registro__main--inicio{
+    background-color: var(--colorMusgo);
+    border: none;
+    border-radius: 5%;
+    color: var(--colorNaranjaGris);
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.registro__main--term{
+
 }
