@@ -1,12 +1,15 @@
 <p align="center">
   <a href=https://github.com/kinglobe/grupo_4_almacenRegional>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <img src=https://github.com/kinglobe/grupo_4_almacenRegional/blob/ee540ae599a84a666455ff5c4059520bf7a71cf9/wireframes/logoAlmacen.png alt="logo">
   </a>
 </p>
 
 # Proyecto en proceso, por favor revisar rama [Develop](https://github.com/kinglobe/grupo_4_almacenRegional/tree/develop)
 =======
+=======
+>>>>>>> 92d3e9ec598509cb9258ba81ac2dd603d9ffd7cf
     <img src=https://github.com/kinglobe/grupo_4_almacenRegional/blob/ee540ae599a84a666455ff5c4059520bf7a71cf9/wireframes/logoAlmacen.png alt="logo" width="250" height="250">
   </a>
 </p>
@@ -55,4 +58,7 @@ Los cinco integrantes del grupo somos estudiantes del curso de Programacion web 
 
 - https://www.argentinaencasa.com/
 
+<<<<<<< HEAD
+>>>>>>> 92d3e9ec598509cb9258ba81ac2dd603d9ffd7cf
+=======
 >>>>>>> 92d3e9ec598509cb9258ba81ac2dd603d9ffd7cf
