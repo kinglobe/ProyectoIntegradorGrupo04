@@ -1,0 +1,1 @@
+Por ahora la carpeta de wireframes la puse aca, despues la cambiamos si es necesario.

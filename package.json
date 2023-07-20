@@ -1,0 +1,16 @@
+{
+  "name": "grupo_4_almacenregional",
+  "version": "1.0.0",
+  "description": "Almacén Regional es un proyecto que busca transmitir la esencia argentina a través de sus productos. Vinos, licores,aceites, dulces, quesos, yerbas, especias, artesanías son solo algunos de los productos que podemos encontrar en la tienda.\r Los productos están orientados a turistas tanto locales como extranjeros y ciudadanos en general que buscan conectarse con las culturas de otras regiones del país.\r Trabajan en estrecha colaboración con los artesanos locales, brindándoles apoyo y promoviendo su talento, esto permite, también, proveer productos a locales gastronómicos de todo el país.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
