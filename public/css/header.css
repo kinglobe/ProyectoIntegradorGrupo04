@@ -1,0 +1,92 @@
+*{box-sizing: border-box;margin: 0;padding: 0;}
+li{list-style: none;}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold
+}
+body{
+
+width: 100%;
+}
+
+.header{
+    display: flex;
+    background-color: var(--colorVerdeOliva);
+    justify-content: space-between;
+}
+
+.header__izquierda img {
+    width: 120px;
+}
+
+.header__centro{
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorVerdeOliva);
+}
+div.header__busqueda{
+    display: flex;
+    margin-top: 6px;
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+.header__busqueda input{width: 300px;padding: 10px;padding-right: 35px;border-radius: 5px 0 0 5px;border: 0;outline: none;font-size: 1rem;}
+.header__busqueda button{background-color: rgb(127 ,167, 99);padding: 12px 15px;border: 0;margin: auto;border-radius: 0 5px 5px 0;color: #fff;}
+div.header__titulos ul{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+div.header__titulos ul li {
+    padding: 8px;
+}
+div.header__titulos{
+    display: none;
+}
+div.header__botonmenu{
+    color: var(--colorNaranja);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    background-color: var(--colorVerdeOliva);
+}
+div.header__botonmenu i:hover{
+    background-color: rgb(186, 124, 49);
+}
+div.header__botonmenu i{padding: 20px;background-color: blanchedalmond;border-radius: 50px;color: yellowgreen;font-size: 25px;margin: 10px;}
+div.header__derecha ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 20px;
+
+}
+div.header__derecha{
+    display: none;
+}
+div.carrito{
+    font-size: 30px;
+    color: white;
+    margin-top: 10px;
+}
+
+@media (min-width: 900px) {
+    div.header__titulos{
+        display: block;
+    }
+    div.header__derecha{
+        display: block;
+    }
+    div.header__botonmenu{
+        display: none;
+    }
+  }
