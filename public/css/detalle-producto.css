@@ -1,0 +1,364 @@
+header {
+  margin-bottom: 30px;
+}
+
+
+.detalle-producto-main {}
+
+.product-details {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+
+
+
+}
+
+.image-container {
+  border: 2px solid black;
+  width: 50%;
+  padding: 0;
+  text-align: center;
+
+
+
+}
+
+.image-container img {
+  width: 80%;
+  margin-top: 60px;
+
+}
+
+
+
+.product-details-container {
+  border: 2px solid black;
+  text-align: center;
+  padding: 30px 25px;
+  background-color: lightgray;
+  width: 45%;
+
+
+
+}
+
+.description-prev {
+  position: relative;
+}
+
+.description-prev a {
+  color: black;
+  position: absolute;
+  top: -25px;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 3px;
+
+}
+
+.name-product {
+  margin-bottom: 10px;
+}
+
+.description--precio,
+.price {
+  color: black;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.option {
+  margin-bottom: 15px;
+
+}
+
+.card__credit {
+  margin-bottom: 20px;
+}
+
+.compra {
+  margin-bottom: 10px;
+  background-color: var(--colorVerdeOliva);
+  border-radius: 5px;
+}
+
+.add-to-cart {
+  border-radius: 5px;
+  background-color: var(--colorNaranja);
+}
+
+.section__description {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: lightgray;
+  margin: 15px auto;
+  width: 65%;
+
+}
+
+.section__description {
+  text-align: center;
+}
+
+.section__description h3 {
+  margin-bottom: 8px;
+}
+
+.section__description p {
+  margin-bottom: 20px;
+}
+
+.home__aside {
+  width: 70%;
+  margin: 30px auto 0;
+
+
+}
+
+.section__aside--descripcion {
+  background-color: #ccc;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 20px;
+
+
+}
+
+.section__aside--descripcion p {
+  line-height: 1.5;
+
+}
+
+@media(min-width:768px) {
+
+  .detalle-producto-main {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+
+  }
+
+  .product-details {
+    width: 70%;
+
+
+
+  }
+
+  .section__description {
+    margin: 1px auto;
+  }
+
+
+  .section__description {
+    width: 40%;
+    padding: 30px 10px;
+
+
+
+  }
+
+
+}
+
+
+
+@media(min-width:1024px) {
+  header {
+
+    margin-bottom: 30px;
+  }
+
+
+  .detalle-producto-main {
+    display: flex;
+    width: 95%;
+
+
+
+  }
+
+  .image-container {
+    border: 2px solid black;
+    width: 45%;
+    padding: 0;
+    text-align: center;
+
+
+
+  }
+
+  .image-container img {
+    width: 40%;
+  }
+
+  .product-details-container {
+    width: 48%;
+
+  }
+
+
+
+  .section__description {
+    width: 40%;
+
+
+
+
+  }
+
+
+
+
+  /* informacion-producto */
+  .product-info {
+    border: 1px solid black;
+    padding: 50px 40px;
+    /* primer valor: arriba y abajo, segundo costado */
+    /* text-align: center;
+  background-color: var(--colorNaranjaGris); */
+
+
+  }
+
+  /* .description-prev {
+  position: relative;
+} */
+
+  /* .description-prev a {
+  color: black;
+  position: absolute;
+  top: -33px;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 3px;
+
+} */
+
+  .name-product {
+    margin-bottom: 5px;
+  }
+
+  .description--precio,
+  .price {
+    color: black;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+
+
+
+  .option {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    /* Alineamos los elementos verticalmente */
+  }
+
+  .quantity-control{
+    margin-left: 100px;
+  }
+
+  .option-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    /* margin-bottom: 10px; */
+  }
+
+  .option-icon i {
+
+
+    color: #fff;
+  }
+
+  .option-label {
+
+
+    /* margin: 0; */
+  }
+
+
+  .card__credit {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+
+  }
+
+
+  /* botones */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+
+  .compra {
+    margin-bottom: 10px;
+    background-color: var(--colorVerdeOliva);
+    border-radius: 5px;
+  }
+
+  .add-to-cart {
+    border-radius: 5px;
+    background-color: var(--colorNaranja);
+  }
+
+  /* caracteristicas principales */
+  .section__description {
+    border: 1px solid black;
+    padding: 30px;
+    background-color: lightgray;
+  }
+
+  .section__description {
+    text-align: center;
+  }
+
+  .section__description h3 {
+    margin-bottom: 8px;
+  }
+
+  .section__description p {
+    margin-bottom: 20px;
+  }
+
+
+  /* aside-descripcion */
+
+  .home__aside {
+    width: 60%;
+    margin: 30px auto 0;
+
+
+  }
+
+  .section__aside--descripcion {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+
+
+  }
+
+  .section__aside--descripcion p {
+    line-height: 1.5;
+
+  }
+
+}
