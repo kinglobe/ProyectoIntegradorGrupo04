@@ -1,31 +1,74 @@
-.registro__body{
-    background-color: var(--colornaranja);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+.login__body{
+    background-color: var(--colorNaranjaGris);
 }
-.registro__main{
+.login__main{
     background-color: var(--colorCuarzo);
     color: var(--colorNaranjaGris);
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
+    font-family: 'calibri';
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 15px;
+    padding-top: 20px;
+    border-radius: 5px;
 }
-.registro__main h2{
 
+.login__main h1{
+    font-family: Alegreya Sans SC;
+    font-size: 30px;
+    text-align: center;
 }
-.registro__main--subt {
-
+.login__main h4{
+    padding: 15px;
+    text-align: center;
 }
 
-.registro__main--sesion{
-background-color: var(--colorMusgo);
+.login--dato {
+    width: 100%;
+    background: var(--colorNaranjaGris);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid var(--colorNaranja);
+    font-family: 'calibri';
+    font-size: 20px;
+}
+
+  .login__main--sesion {
+    text-align: center;
+}
+
+.login__main--buton{
+background-color: var(--colorVerdeMusgo);
 border: none;
 border-radius: 5%;
 color: var(--colorNaranjaGris);
-padding: 15px;
+padding: 10px;
 margin-top: 10px;
+margin-bottom: 10px;;
+font-size: 15px;
+
 }
 
-.registro__main--inicio{
-    background-color: var(--colorMusgo);
+
+.googlefacebook{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.login__main--registro{
+    text-align: center;
+}
+
+.login__main--cuenta{
+    background-color: var(--colorVerdeMusgo);
     border: none;
     border-radius: 5%;
     color: var(--colorNaranjaGris);
@@ -33,6 +76,7 @@ margin-top: 10px;
     margin-top: 5px;
 }
 
-.registro__main--term{
-
+.login__main--term{
+    text-align: center;
+    margin: 20px;
 }

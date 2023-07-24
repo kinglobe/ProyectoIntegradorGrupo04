@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3d210cf143.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Login</title>
 </head>
 <body class="login__body">
@@ -12,34 +14,38 @@
     </header>
 
     <main class="login__main">
-    <h2>Inicia tu sesión</h2>
+            <figure class="registro_logo">
+                <a href="/"><img src="/img/logoAlmacen.png" alt=""></a>
+                </figure>
+    <h1>Inicia tu sesión</h1>
     <div class="login__main--subt">
-        <p>Ingresa para poder comprar con mayor facilidad</p>
+        <h4>Ingresa para poder comprar con mayor facilidad</h4>
     </div>
-    <form action="login____main--form">
+    <form action="login__main--form">
         <div class="login__main--mail">
-            <input class="">
-            <label for="">Email o número de teléfono</label>
+        <input class="login--dato" type="email" name="correo" id="correo" placeholder="Ingrese su email">
         </div>
         <div class="login__main--pass">
-            <input class="">
-            <label for="">Contraseña</label>
+        <input class="login--dato" type="password" name="password" id="contraseña" placeholder="Ingrese su Contraseña">
         </div>
         
         <div class="login__main--sesion">
-            <button>Iniciar sesión</button>
+            <input class="login__main--buton" type="submit" value="Iniciar Sesión">
+        </div>
+        <div class="googlefacebook">
+            <h3>o inicia sesion con</h3>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-facebook"></i>
         </div>
         <div class="login__main--registro">
             <label for="">Primera vez aquí?</label>
-        </div>
-        <div class="login__main--inicio">
-            <button>Crea tu cuenta</button>
+            <a href="registro.html">
+            <input class="login__main--cuenta" type="submit" value="Crea tu cuenta"></a>
         </div>
     </form>
         <div class="login__main--term">
             <p>Al continuar, aceptas los Terminos y Condiciones y la Politica de Privacidad de Almacaen Regional</p>
         </div>
-    
     </main>
 </body>
 </html>
