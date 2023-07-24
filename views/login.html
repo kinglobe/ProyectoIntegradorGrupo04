@@ -14,31 +14,38 @@
     </header>
 
     <main class="login__main">
-        <article class="login__main__article">
-    <h2>Inicia tu sesión</h2>
+            <figure class="registro_logo">
+                <a href="/"><img src="/img/logoAlmacen.png" alt=""></a>
+                </figure>
+    <h1>Inicia tu sesión</h1>
     <div class="login__main--subt">
-        <p>Ingresa para poder comprar con mayor facilidad</p>
+        <h4>Ingresa para poder comprar con mayor facilidad</h4>
     </div>
     <form action="login__main--form">
         <div class="login__main--mail">
-        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su email">
+        <input class="login--dato" type="email" name="correo" id="correo" placeholder="Ingrese su email">
         </div>
         <div class="login__main--pass">
-        <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+        <input class="login--dato" type="password" name="password" id="contraseña" placeholder="Ingrese su Contraseña">
         </div>
         
         <div class="login__main--sesion">
             <input class="login__main--buton" type="submit" value="Iniciar Sesión">
         </div>
+        <div class="googlefacebook">
+            <h3>o inicia sesion con</h3>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-facebook"></i>
+        </div>
         <div class="login__main--registro">
             <label for="">Primera vez aquí?</label>
-            <input class="login__main--cuenta" type="submit" value="Crea tu cuenta">
+            <a href="registro.html">
+            <input class="login__main--cuenta" type="submit" value="Crea tu cuenta"></a>
         </div>
     </form>
         <div class="login__main--term">
             <p>Al continuar, aceptas los Terminos y Condiciones y la Politica de Privacidad de Almacaen Regional</p>
         </div>
-    </article>
     </main>
 </body>
 </html>

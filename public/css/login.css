@@ -2,9 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
-
-  }
+ }
 
 .login__body{
     background-color: var(--colorNaranjaGris);
@@ -12,21 +10,39 @@
 .login__main{
     background-color: var(--colorCuarzo);
     color: var(--colorNaranjaGris);
+    font-family: 'calibri';
     width: 400px;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 13px;
-    border-radius: 4px;
-    font-family: 'calibri';
+    padding: 15px;
+    padding-top: 20px;
+    border-radius: 5px;
 }
-.login__main h2{
+
+.login__main h1{
     font-family: Alegreya Sans SC;
+    font-size: 30px;
+    text-align: center;
 }
-.login__main--form {
-    color: var(--colorNaranjaGris);
+.login__main h4{
+    padding: 15px;
+    text-align: center;
+}
+
+.login--dato {
+    width: 100%;
+    background: var(--colorNaranjaGris);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid var(--colorNaranja);
+    font-family: 'calibri';
+    font-size: 20px;
+}
+
+  .login__main--sesion {
+    text-align: center;
 }
 
 .login__main--buton{
@@ -36,7 +52,19 @@ border-radius: 5%;
 color: var(--colorNaranjaGris);
 padding: 10px;
 margin-top: 10px;
+margin-bottom: 10px;;
 font-size: 15px;
+
+}
+
+
+.googlefacebook{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.login__main--registro{
+    text-align: center;
 }
 
 .login__main--cuenta{
@@ -49,5 +77,6 @@ font-size: 15px;
 }
 
 .login__main--term{
-
+    text-align: center;
+    margin: 20px;
 }
