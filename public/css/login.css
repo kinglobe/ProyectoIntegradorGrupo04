@@ -1,31 +1,46 @@
-.registro__body{
-    background-color: var(--colornaranja);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+  }
+
+.login__body{
+    background-color: var(--colorNaranjaGris);
 }
-.registro__main{
+.login__main{
     background-color: var(--colorCuarzo);
     color: var(--colorNaranjaGris);
-    margin-top: 30px;
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
+    padding: 13px;
+    border-radius: 4px;
+    font-family: 'calibri';
 }
-.registro__main h2{
-
+.login__main h2{
+    font-family: Alegreya Sans SC;
 }
-.registro__main--subt {
-
+.login__main--form {
+    color: var(--colorNaranjaGris);
 }
 
-.registro__main--sesion{
-background-color: var(--colorMusgo);
+.login__main--buton{
+background-color: var(--colorVerdeMusgo);
 border: none;
 border-radius: 5%;
 color: var(--colorNaranjaGris);
-padding: 15px;
+padding: 10px;
 margin-top: 10px;
+font-size: 15px;
 }
 
-.registro__main--inicio{
-    background-color: var(--colorMusgo);
+.login__main--cuenta{
+    background-color: var(--colorVerdeMusgo);
     border: none;
     border-radius: 5%;
     color: var(--colorNaranjaGris);
@@ -33,6 +48,6 @@ margin-top: 10px;
     margin-top: 5px;
 }
 
-.registro__main--term{
+.login__main--term{
 
 }
