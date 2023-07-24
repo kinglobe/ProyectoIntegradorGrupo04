@@ -3,7 +3,10 @@ header {
 }
 
 
-.detalle-producto-main {}
+.detalle-producto-main {
+ 
+
+}
 
 .product-details {
   display: flex;
@@ -16,7 +19,7 @@ header {
 
 .image-container {
   border: 2px solid black;
-  width: 50%;
+  width: 40%;
   padding: 0;
   text-align: center;
 
