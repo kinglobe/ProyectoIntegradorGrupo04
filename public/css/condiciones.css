@@ -2,21 +2,26 @@
 .condi__main{
     background-color: var(--colorCuarzo);
     color: var(--colorNaranjaGris);
-    font-family: 'calibri';
-    width: 400px;
+    font-family: var(--tipografiaGenera);
+    width: 95%;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 100px;
-    padding: 15px;
-    padding-top: 20px;
+    padding: 70px;
+    padding-top: 80px;
     border-radius: 5px;
-}
-.condicion__main h1{
-    font-family: Alegreya Sans SC;
-    font-size: 30px;
     text-align: center;
 }
-.condicion__main h4{
-    padding: 15px;
+.condi__main h1{
+    font-size: 2.5rem;
     text-align: center;
+}
+.condi__main h4{
+    font-size: 1.3rem;
+    padding: 35px;
+    text-align: center;
+}
+.condi__main--article{
+    font-size: 1rem;
+
 }
