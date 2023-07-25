@@ -1,6 +1,10 @@
-header {
-  margin-bottom: 30px;
+.detalle-producto-main {
+  margin-top: 30px;
 }
+
+/* header {
+  margin-bottom: 30px; manito, esto modifica el header para todos, lo que tendrias que hacer es meterle un margin-top al que queres separar del header. 
+} */
 
 .product-details {
   display: flex;
@@ -169,11 +173,15 @@ header {
 
 
 @media(min-width:1024px) {
-  header {
 
-    margin-bottom: 30px;
+  .detalle-producto-main {
+    margin-top: 30px;
   }
+  /*   header {
 
+    margin-bottom: 30px; esto tambien manito
+  }
+ */
 
   .detalle-producto-main {
     display: flex;
