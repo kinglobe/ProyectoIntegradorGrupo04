@@ -11,12 +11,12 @@
 .home__main__section-slogan {
     margin: 20px 0 30px;
     text-align: center;
-    margin-top: 25px;
     padding: 10px 0;
 }
 
-.home__main__section-slogan h2 {
-    margin: 20px 0;
+.home__main__section-slogan h1 {
+    margin: 10px 0 30px;
+    font-size: 1.2rem;
 }
 
 .home__main__contenedor {
@@ -28,23 +28,25 @@
 }
 
 .home__main__contenedor__articulo-yerba h3 {
-    position: absolute;
-    top: 45px;
-    left: 75px;
-    text-transform: uppercase;
-    font-size: 2rem;
-    color: #FFF;
+    display: none;
 }
 
 .home__main__contenedor__articulo-yerba p {
-    position: absolute;
-    top: 30px;
-    left: 40px;
-    font-style: italic;
-    font-size: 1.3rem;
-    color: #FFF;
+    display: none;
 }
 
+.home__main__contenedor__articulo-vino-alfajor {
+    position: relative;
+}
+
+.home__main__contenedor__articulo-vino-alfajor h3 {
+    display: none;
+
+}
+
+.home__main__contenedor__articulo-vino-alfajor p {
+    display: none;
+}
 
 .home__main__contenedor__articulo2 div img {
     width: 100%;
@@ -85,7 +87,7 @@
 /* -------------seccion de articulos------------------- */
 
 .home__main__article {
-    margin: 10px 0;
+    margin: 10px 0 20px;
     background-color: #FFF;
 }
 
@@ -99,7 +101,7 @@
 
 .home__main__article__figure img {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     height: 100%;
     object-fit: cover;
 
@@ -157,7 +159,12 @@
 
 @media (min-width:460px) {
 
-    /* ---------------------------------------MAIN ---------------------------*/
+    /* ---------------------------------------seccion pudle ---------------------------*/
+    .home__main__section-slogan h1 {
+        margin: 10px 0 40px;
+        font-size: 1.8rem;
+    }
+
     .home__main__section__contenedor-articulos {
         margin: 30px 0;
     }
@@ -171,9 +178,44 @@
         width: 49.2%;
     }
 
+    .home__main__contenedor {
+        position: relative;
+    }
+
     .home__main__contenedor__articulo-yerba img {
         width: 100%;
+        -webkit-filter: grayscale(0.3);
+        -webkit-transition: all 0.5s ease-in-out;
     }
+
+    .home__main__contenedor__articulo-yerba:hover img {
+        -webkit-filter: grayscale(0);
+        -webkit-transform: scale(1.07);
+    }
+
+    .home__main__contenedor__articulo-yerba h3 {
+        position: absolute;
+        top: 45px;
+        left: 75px;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: #ffffff;
+        display: block
+        ;
+    }
+
+    /* .home__main__contenedor__articulo-yerba p {
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        font-style: italic;
+        font-size: 1rem;
+        color: var(--colorNaranjaGris);
+        ;
+    } */
+
+
 
     .home__main__contenedor__articulo2 {
         width: 49.2%;
@@ -193,23 +235,36 @@
         top: 45px;
         left: 75px;
         text-transform: uppercase;
-        font-size: 2rem;
-        color: #FFF;
+        font-size: 1.5rem;
+        color: #ffffff;;
+        display: block;
 
     }
 
-    .home__main__contenedor__articulo-vino-alfajor p {
+    /* .home__main__contenedor__articulo-vino-alfajor p {
         position: absolute;
         top: 30px;
         left: 7px;
         font-style: italic;
-        font-size: 1.2rem;
-        color: #FFF;
+        font-size: 1rem;
+        color: var(--colorNaranjaGris);
+        display: block;
 
-    }
+    } */
 
     .home__main__contenedor__articulo-vino-alfajor img {
         width: 100%;
+        -webkit-filter: grayscale(0.3);
+        -webkit-transition: all 0.5s ease-in-out;
+    }
+
+    .home__main__contenedor__articulo-vino-alfajor:hover img {
+        -webkit-filter: grayscale(0);
+        -webkit-transform: scale(1.07);
+    }
+
+    .contenedor__enlace-descripcion {
+        background-color: rgba(255, 255, 255, 0.8);
     }
 
     /* -------seccion ventas--------- */
@@ -217,7 +272,7 @@
     .home__main__section__contenedor-articulos {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .home__main__article {
@@ -231,18 +286,46 @@
         padding: 0;
     }
 
-    .home__main__article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
+
 
 }
 
-@media (min-width:900px) {
+@media (min-width:1024px) {
     .home__main {
         width: 1200px;
     }
 
+    .home__main__contenedor__articulo-yerba h3 {
+        font-size: 2rem;
+    }
+
+    .home__main__contenedor__articulo-yerba p {
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        font-style: italic;
+        font-size: 1.2rem;
+        color: #ffffff;;
+        ;
+    }
+
+    .home__main__contenedor__articulo-vino-alfajor h3 {
+        font-size: 2rem;
+
+    }
+
+    .home__main__contenedor__articulo-vino-alfajor p {
+        position: absolute;
+        top: 30px;
+        left: 7px;
+        font-style: italic;
+        font-size: 1.2rem;
+        color: #ffffff;;
+        display: block;
+    }
+
     .home__main__article {
-        width: 20%;
+        width: 23%;
     }
 }
