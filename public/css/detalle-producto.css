@@ -10,11 +10,9 @@ header {
 
 .product-details {
   display: flex;
-  width: 70%;
+  width: 83%;
   margin: 0 auto;
-
-
-
+  justify-content:center;
 }
 
 .image-container {
@@ -40,10 +38,7 @@ header {
   text-align: center;
   padding: 30px 25px;
   background-color: lightgray;
-  width: 45%;
-
-
-
+  width: 59%;
 }
 
 .description-prev {
