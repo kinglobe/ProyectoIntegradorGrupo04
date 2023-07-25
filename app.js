@@ -17,6 +17,8 @@ app.get('/registro',(req,res) => res.sendFile(path.join(__dirname,'views','regis
 
 app.get('/detalle-producto',(req,res) => res.sendFile(path.join(__dirname,'views','detalle-producto.html')));
 
+app.get('/carrito',(req,res) => res.sendFile(path.join(__dirname,'views','carrito.html')));
+
 app.get('/header',(req,res) => res.sendFile(path.join(__dirname,'views','partials','header.html')));
 
 app.get('/footer',(req,res) => res.sendFile(path.join(__dirname,'views','partials','footer.html')));
