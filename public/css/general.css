@@ -7,4 +7,22 @@
     --colorNarajaL: #edc28d;
     --colorPlantaRod: #dfad7e;
     --colorCuarzo: #4E4848;
+    --tipografiaGeneral: 'Alegreya Sans SC';
+}
+
+*{box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+li{list-style: none;}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--colorNaranjaGris);
+}
+figure {
+    margin: 0 auto;
 }
