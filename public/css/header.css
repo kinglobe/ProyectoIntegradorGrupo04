@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 header a{
     text-decoration: none;
     color: white;
@@ -7,22 +6,6 @@ header a{
     font-size: 20px;
     font-weight: bold
 }
-=======
-*{box-sizing: border-box;margin: 0;padding: 0;}
-li{list-style: none;}
-a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold
-}
-body{
-width: 100%;
-}
-
->>>>>>> 2ab8b20fb7ddedcb60cb8ff92de9703b6fd750ea
 .header{
     display: flex;
     background-color: var(--colorVerdeOliva);
