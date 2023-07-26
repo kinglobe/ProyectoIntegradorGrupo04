@@ -24,7 +24,7 @@
 }
 
 .home__main__contenedor__articulo-yerba img {
-    width: 100%;
+    display: none;
 }
 
 .home__main__contenedor__articulo-yerba h3 {
@@ -153,6 +153,7 @@
     }
 
     .home__main__contenedor__articulo-yerba img {
+        display: block;
         width: 100%;
         -webkit-filter: grayscale(0.3);
         -webkit-transition: all 0.5s ease-in-out;
