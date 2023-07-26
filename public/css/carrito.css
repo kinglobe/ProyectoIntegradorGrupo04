@@ -11,12 +11,9 @@
     text-align: center;
 }
 .carrito__main__section__contenedor{
-    padding: 10px;
     width: 80%;
-    margin: 0 auto 30px;
-    margin-top: 35px;
-    text-align: center;
-    border-radius: 5px;
+    margin: 0 auto 5px;
+    margin-top: 15px;
 }
 
 .carrito__main__section--articulos {
@@ -31,6 +28,7 @@
     width: 55%;
     padding: 15px;
     display: flex;
+    border-radius: 5%;
     justify-content: space-between;    
 }
 .carrito__main--img{
@@ -50,33 +48,37 @@
     color: var(--colorCuarzo);
     font-size: 1.5rem;
     text-align: center;
+
 }
 .carrito__main__article--datos h4{
     margin-bottom: 10px;
+ 
+
 }
 .carrito__main__article--datos p{
     margin-bottom: 10px;
 }
-.montos{
+.carrito--montos{
     display: flex;
     justify-content:center;    
     align-items: center;
     gap:30px;
 }
 
-.descuento{
+.carrito--descuento{
     color: var(--colorVerdeOliva);
 }
 
 .carrito--home{
     background-color: var(--colorVerdeMusgo);
     border: none;
-    border-radius: 7%;
+    border-radius: 10%;
     color: var(--colorNaranjaGris);
     padding: 5px;
     margin-top: 5px;
     margin-bottom: 5px;;
     font-size: 1.2rem;
+
 
 }
 .carrito--home:hover {
@@ -86,29 +88,36 @@
 
 
 .carrito__aside {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        background-color: var(--colorNaranja);
-        width: 35%;
-        margin-bottom: 10px;
-        flex-wrap: wrap;
-        border-radius: 5px;
-    }
+    padding-top:15px;
+    color: var(--colorCuarzo);
+    font-size: 1.5rem;
+    background-color: var(--colorNaranja);
+    width: 35%;
+    margin: 5 auto 5px;
+    border-radius: 10px;
+}
     .carrito__aside__section {
     width: 100%;
     margin-top:5%;
     color: var(--colorCuarzo);
     font-size: 1.5rem;
+    }
+.carrito__aside__section h3{
+    text-align: center;
 
 }
 .carrito__aside__section__article {
-    padding: 15px;
+    padding: 5px;
+    font-size: 1.2rem;
+
 }
 
-.carrito__aside--section{
-    text-align: center;
-
+.carrito__aside__section__article h5{
+    font-family: 'calibri';
+    font-size: 1.2rem;
+}
+.carrito__aside--sesion{
+text-align: center;
 }
 .carrito__comprar--buton{
     background-color: var(--colorVerdeMusgo);
@@ -117,7 +126,7 @@
     color: var(--colorNaranjaGris);
     padding: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
     font-size: 20px;
 
 }
