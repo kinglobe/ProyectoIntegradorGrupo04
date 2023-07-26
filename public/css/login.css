@@ -57,8 +57,8 @@ font-size: 20px;
 
 }
 .login__main--buton:hover {
-    color: var(--colorCuarzo);
-    background-color: var(--colorNaranja);
+    color: var(--colorNaranjaL);
+    background-color: var(--colorVerdeOliva);
       }
 
 
@@ -87,8 +87,8 @@ font-size: 20px;
     font-size: 14px;
 }
 .login--registro:hover {
-    color: var(--colorCuarzo);
-    background-color: var(--colorNaranja);
+    color: var(--colorNaranjaL);
+    background-color: var(--colorVerdeOliva);
 }
 
 .login--term{
@@ -100,5 +100,5 @@ font-size: 20px;
     color: var(--colorPlantaRod)
 }
 .login--condiciones:hover {
-    color: var(--colorVerde);
+    color: var(--colorVerdeOliva);
 }
