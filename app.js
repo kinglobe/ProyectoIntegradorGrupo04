@@ -23,6 +23,6 @@ app.get('/header',(req,res) => res.sendFile(path.join(__dirname,'views','partial
 
 app.get('/footer',(req,res) => res.sendFile(path.join(__dirname,'views','partials','footer.html')));
 
-
+app.get ('/*', (req,res) => res.sendFile(path.join(__dirname, 'views','404notFound.html')));
 
 app.listen(PORT, () => console.log(`server running in http://localhost:${PORT}`));
