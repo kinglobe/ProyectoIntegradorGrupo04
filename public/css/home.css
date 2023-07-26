@@ -106,6 +106,7 @@
     font-size: 22px;
     padding-right: 10px;
     font-weight: 400;
+    color: black;
 }
 
 .home__main__article__contendeor--precio-descuento-descr p.descuento {
@@ -143,7 +144,9 @@
 
     .home__main__contenedor {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        position: relative;
     }
 
     .home__main__contenedor__articulo-yerba {
@@ -151,7 +154,7 @@
     }
 
     .home__main__contenedor {
-        position: relative;
+  
     }
 
     .home__main__contenedor__articulo-yerba img {
@@ -180,6 +183,8 @@
 
     .home__main__contenedor__articulo2 {
         width: 49.2%;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .home__main__contenedor__articulo2 img {
@@ -231,6 +236,7 @@
         font-size: 16px;
         margin: 0;
         padding: 0;
+        color: black;
     }
 
     .home__main__article {
@@ -241,9 +247,9 @@
 }
 
 @media (min-width:1024px) {
-    .home__main {
+    /* .home__main {
         width: 1200px;
-    }
+    } */
 
     .home__main__contenedor__articulo-yerba h3 {
         font-size: 2rem;
@@ -278,4 +284,7 @@
     .home__main__article {
         width: 23%;
     }
+}
+main {
+    width: 1200px;
 }
