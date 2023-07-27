@@ -31,4 +31,5 @@ swiper-slide
 
 .swiper-button-next::after,.swiper-button-prev::after {
   font-size: 15px;
+  font-weight: 900;
 }

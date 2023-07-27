@@ -55,7 +55,9 @@
 
 
 /* -------------seccion de articulos------------------- */
-
+.home__main__section {
+    margin-bottom: 40px;
+}
 .home__main__article {
     margin: 10px 0 20px;
     background-color: #FFF;
@@ -103,14 +105,17 @@
 
 .home__main__article__contendeor--precio-descuento-descr p.precio {
     width: 30%;
-    font-size: 18px;
+    font-size: 22px;
     padding-right: 10px;
+    font-weight: 400;
+    color: black;
 }
 
 .home__main__article__contendeor--precio-descuento-descr p.descuento {
     width: 70%;
     color: #39b54a;
-    font-size: 16px;
+    font-size: 22px;
+    font-weight: 400;
     padding-left: 20px;
 }
 
@@ -131,17 +136,19 @@
 
     /* ---------------------------------------seccion pudle ---------------------------*/
     .home__main__section-slogan h1 {
-        margin: 10px 0 40px;
+        margin: 10px 0 30px;
         font-size: 1.8rem;
     }
 
     .home__main__section__contenedor-articulos {
-        margin: 30px 0;
+        margin: 20px 0 30px;
     }
 
     .home__main__contenedor {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        position: relative;
     }
 
     .home__main__contenedor__articulo-yerba {
@@ -149,7 +156,7 @@
     }
 
     .home__main__contenedor {
-        position: relative;
+  
     }
 
     .home__main__contenedor__articulo-yerba img {
@@ -178,6 +185,8 @@
 
     .home__main__contenedor__articulo2 {
         width: 49.2%;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .home__main__contenedor__articulo2 img {
@@ -229,18 +238,19 @@
         font-size: 16px;
         margin: 0;
         padding: 0;
+        color: black;
     }
 
     .home__main__article {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
+    
+
 
 }
 
 @media (min-width:1024px) {
-    .home__main {
-        width: 1200px;
-    }
+ 
 
     .home__main__contenedor__articulo-yerba h3 {
         font-size: 2rem;
@@ -276,3 +286,7 @@
         width: 23%;
     }
 }
+
+.home__main {
+    max-width: 1200px;
+} 
