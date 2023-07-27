@@ -60,9 +60,28 @@
                     <div class="carrito__main__article--datos">
                         <h4>Vino cabernet</h4>
                         <div class="carrito--montos">
-                        <p class="carrito--precio">$6.770</p>
-                        <p class="carrito--descuento">40% off</p></div>
-                        <a class="carrito--home" href="/">Continuar comprando</a>
+                            <p class="carrito--precio">$6.770</p>
+                            <p class="carrito--descuento">40% off</p>
+                        </div>
+                        <div class="carrito--montos2">
+                            <form action="/cantidad" method="GET">
+                                <label>Cantidad </label>
+                                <select name="carrito--cantidad">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                    <option value="">7</option>
+                                    <option value="">8</option>
+                                    <option value="">9</option>
+                                </select>
+                            </form>
+                            <a class="carrito--home" href="/">Continuar comprando</a> 
+                        </div>
+                        <a class="carrito--borrar" href="/">Borrar articulo</a>
+
                     </div> 
                 </article>
             
@@ -70,9 +89,23 @@
             <section class="carrito__aside__section">
                 <h3>Resumen de compra</h3>
                 <article class="carrito__aside__section__article">
-                    <h5 >Producto</h5>
-                    <p>Envio</p>
+                    <h5 >Cantidad</h5>
+                    <form action="/envio" method="GET">
+                        <label for="carrito__envio" >Tipo de envío</label>
+                        <div><input type="checkbox" name="envio" value="Retiro de sucursal">
+                            <p>Retiro de sucursal</p></div>
+                        <div><input type="checkbox" name="envio" value="Envío por correo">
+                            <p>Envío por correo</p></div>
+                    </form>    
                 </article>
+                <form action="/pagos" method="GET">
+                    <label>Seleccionar tipo de Pago</label>
+                    <select name="carrito--pago">
+                        <option value="">Efectivo</option>
+                        <option value="">Tarjeta</option>
+                        <option value="">Mercado Pago</option>
+                    </select>
+                </form>
             </section>
             <section class="carrito__aside__section"></section>
             <div class="carrito__aside--sesion">

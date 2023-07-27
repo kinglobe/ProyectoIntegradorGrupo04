@@ -1,4 +1,7 @@
-
+.carrito__main{
+    padding-bottom: 50px;
+    background-color: var(--colorPlantaRod);
+}
 .carrito__main h2{
     font-family: Alegreya Sans SC;
     font-size: 40px;
@@ -23,10 +26,11 @@
     justify-content: space-between;    
 }
 .carrito__main__article{
-    background-color: var(--colorNaranja);
+    background-color: var(--colorNaranjaGris);
     border: none;
     width: 55%;
     padding: 15px;
+    margin: 5 auto 5px;
     display: flex;
     border-radius: 5%;
     justify-content: space-between;    
@@ -34,12 +38,13 @@
 .carrito__main--img{
     width: 40%;
     margin-left:5px;
+    margin-top:7%;
 }
 
 .carrito__main img{
     max-width: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 10px;
+    padding: 10px;
 }
 
 .carrito__main__article--datos{
@@ -64,18 +69,28 @@
     align-items: center;
     gap:30px;
 }
+.carrito--montos2{
+    margin-bottom:20px;
+}
 
 .carrito--descuento{
     color: var(--colorVerdeOliva);
 }
-
+.carrito--borrar{
+    padding: 10px;
+    color: var(--colorVerdeOliva);
+    font-size: 1.2rem;
+}
+.carrito--borrar:hover{
+    color: var(--colorCuarzo);
+}
 .carrito--home{
     background-color: var(--colorVerdeMusgo);
     border: none;
-    border-radius: 10%;
+    border-radius: 5px;
     color: var(--colorNaranjaGris);
     padding: 5px;
-    margin-top: 5px;
+    margin-top: 35px;
     margin-bottom: 5px;;
     font-size: 1.2rem;
 
@@ -88,28 +103,27 @@
 
 
 .carrito__aside {
-    padding-top:15px;
+    padding:10px;
     color: var(--colorCuarzo);
-    font-size: 1.5rem;
-    background-color: var(--colorNaranja);
+    font-size: 1.2rem;
+    background-color: var(--colorNaranjaGris);
     width: 35%;
     margin: 5 auto 5px;
     border-radius: 10px;
 }
-    .carrito__aside__section {
+.carrito__aside__section {
     width: 100%;
     margin-top:5%;
     color: var(--colorCuarzo);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     }
 .carrito__aside__section h3{
     text-align: center;
-
 }
 .carrito__aside__section__article {
-    padding: 5px;
-    font-size: 1.2rem;
-
+    padding: 15px;
+    font-size: 1rem;
+    margin-left: 20px;
 }
 
 .carrito__aside__section__article h5{
@@ -117,7 +131,7 @@
     font-size: 1.2rem;
 }
 .carrito__aside--sesion{
-text-align: center;
+    text-align: center;
 }
 .carrito__comprar--buton{
     background-color: var(--colorVerdeMusgo);
