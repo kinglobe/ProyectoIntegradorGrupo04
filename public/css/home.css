@@ -244,14 +244,13 @@
     .home__main__article {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
+    
 
 
 }
 
 @media (min-width:1024px) {
-    /* .home__main {
-        width: 1200px;
-    } */
+ 
 
     .home__main__contenedor__articulo-yerba h3 {
         font-size: 2rem;
@@ -287,6 +286,7 @@
         width: 23%;
     }
 }
-/* main {
-    width: 1200px;
-} */
+
+.home__main {
+    max-width: 1200px;
+} 
