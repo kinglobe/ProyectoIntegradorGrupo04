@@ -1,6 +1,7 @@
 .carrito__main{
     padding-bottom: 50px;
     background-color: var(--colorPlantaRod);
+
 }
 .carrito__main h2{
     font-family: Alegreya Sans SC;
@@ -21,14 +22,12 @@
 
 .carrito__main__section--articulos {
     width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;    
+    
 }
 .carrito__main__article{
     background-color: var(--colorNaranjaGris);
     border: none;
-    width: 55%;
+    width: 100%;
     padding: 15px;
     margin: 5 auto 5px;
     display: flex;
@@ -63,15 +62,14 @@
 .carrito__main__article--datos p{
     margin-bottom: 10px;
 }
+
 .carrito--montos{
     display: flex;
     justify-content:center;    
     align-items: center;
     gap:30px;
 }
-.carrito--montos2{
-    margin-bottom:20px;
-}
+
 
 .carrito--descuento{
     color: var(--colorVerdeOliva);
@@ -107,7 +105,7 @@
     color: var(--colorCuarzo);
     font-size: 1.2rem;
     background-color: var(--colorNaranjaGris);
-    width: 35%;
+    width: 100%;
     margin: 5 auto 5px;
     border-radius: 10px;
 }
@@ -133,18 +131,40 @@
 .carrito__aside--sesion{
     text-align: center;
 }
+.carrito_label--pago{
+    font-size:1.2rem;
+
+}
+
 .carrito__comprar--buton{
     background-color: var(--colorVerdeMusgo);
     border: none;
     border-radius: 5%;
     color: var(--colorNaranjaGris);
     padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
     font-size: 20px;
-
+    text-align: center;
 }
 .carrito__comprar--buton:hover {
     color: var(--colorNaranjaL);
     background-color: var(--colorVerdeOliva);
+      }
+
+      @media (min-width:361px){
+        .carrito__main__section--articulos {
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;    
+        }
+        .carrito__main__article{
+            width: 60%;
+           
+        }
+        .carrito__aside {
+            width: 35%;
+
+        }
       }

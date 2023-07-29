@@ -13,7 +13,7 @@
     <header>
         <nav class="header">
             <div class="header__izquierda">
-                <a href="/"><img src="/img/logoAlmacen.png" alt=""></a>
+                <a href="/"><img src="/img/logoAlmacen.png" alt="" /></a>
             </div>
             <div class="header__centro">
                 <div class="header__titulos">
@@ -26,10 +26,9 @@
                     </ul>
                 </div>
                 <div class="header__busqueda">
-<input type="busqueda" placeholder="¿Qué estás Buscando?...">
-<button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="busqueda" placeholder="¿Qué estás Buscando?..." />
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
-
             </div>
             <div class="header__botonmenu">
                 <i class="fa-solid fa-bars"></i>
@@ -46,16 +45,13 @@
         </nav>
     </header>
 
-
-
-<div>
     <main class="carrito__main">
         <section class="carrito__main__section__contenedor">
             <h2>Termina tu compra</h2>
-        <div class="carrito__main__section--articulos">
+            <div class="carrito__main__section--articulos">
                 <article class="carrito__main__article">
                     <figure class="carrito__main--img">
-                        <img src="/img/vinos/00103.jpg" alt="">
+                        <img src="/img/vinos/00103.jpg" alt="" />
                     </figure>
                     <div class="carrito__main__article--datos">
                         <h4>Vino cabernet</h4>
@@ -81,41 +77,41 @@
                             <a class="carrito--home" href="/">Continuar comprando</a> 
                         </div>
                         <a class="carrito--borrar" href="/">Borrar articulo</a>
-
+                        asd
                     </div> 
                 </article>
+            </div>
             
             <aside class="carrito__aside">
-            <section class="carrito__aside__section">
-                <h3>Resumen de compra</h3>
-                <article class="carrito__aside__section__article">
-                    <h5 >Cantidad</h5>
-                    <form action="/envio" method="GET">
-                        <label for="carrito__envio" >Tipo de envío</label>
-                        <div><input type="checkbox" name="envio" value="Retiro de sucursal">
-                            <p>Retiro de sucursal</p></div>
-                        <div><input type="checkbox" name="envio" value="Envío por correo">
-                            <p>Envío por correo</p></div>
-                    </form>    
-                </article>
-                <form action="/pagos" method="GET">
-                    <label>Seleccionar tipo de Pago</label>
-                    <select name="carrito--pago">
-                        <option value="">Efectivo</option>
-                        <option value="">Tarjeta</option>
-                        <option value="">Mercado Pago</option>
-                    </select>
-                </form>
-            </section>
-            <section class="carrito__aside__section"></section>
-            <div class="carrito__aside--sesion">
-                <input class="carrito__comprar--buton" type="submit" value="Comprar">
-            </div>
-            </adise>
-        </div>
+                <section class="carrito__aside__section">
+                    <h3>Resumen de compra</h3>
+                    <article class="carrito__aside__section__article">
+                        <h5 >Cantidad</h5>
+                        <form action="/envio" method="GET">
+                            <label for="carrito__envio" >Tipo de envío</label>
+                            <div><input type="checkbox" name="envio" value="Retiro de sucursal" />
+                                <p>Retiro de sucursal</p></div>
+                            <div><input type="checkbox" name="envio" value="Envío por correo" />
+                                <p>Envío por correo</p></div>
+                        </form>    
+                    </article>
+                    <div class="carrito__aside--sesion">
+                        <form action="/pagos" method="GET">
+                            <label class="carrito_label--pago">Seleccionar tipo de Pago</label>
+                            <select name="carrito--pago">
+                                <option value="">Efectivo</option>
+                                <option value="">Tarjeta</option>
+                                <option value="">Mercado Pago</option>
+                            </select>
+                        </form>
+                    </div>
+                </section>
+                <section class="carrito__aside__section"></section>
+            
+                <a class="carrito__comprar--buton" href="404notFound">Comprar</a>
+            </aside>
+        </section>
     </main>
-</div>
-
 </body>
 
 
