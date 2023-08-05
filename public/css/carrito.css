@@ -34,6 +34,7 @@
     display: flex;
     border-radius: 5%;
     justify-content: space-between;    
+    gap: 10px;
 }
 .carrito__main--img{
     width: 40%;
@@ -43,8 +44,7 @@
 
 .carrito__main img{
     max-width: 100%;
-    margin: 10px;
-    padding: 10px;
+
 }
 
 .carrito__main__article--datos{
@@ -53,7 +53,7 @@
     color: var(--colorCuarzo);
     font-size: 1.5rem;
     text-align: center;
-
+    
 }
 .carrito__main__article--datos h4{
     margin-bottom: 10px;
@@ -62,10 +62,11 @@
 }
 .carrito__main__article--datos p{
     margin-bottom: 10px;
+
 }
 
 .carrito--montos{
-    display: flex;
+
     justify-content:center;    
     align-items: center;
     gap:30px;
@@ -94,7 +95,7 @@
     border-radius: 5px;
     color: var(--colorNaranjaGris);
     padding: 5px;
-    margin-top: 35px;
+    margin-top: 5px;
     margin-bottom: 5px;;
     font-size: 1.2rem;
 
@@ -104,6 +105,10 @@
     color: var(--colorNaranjaL);
     background-color: var(--colorVerdeOliva);
 }
+.carrito--montos2{
+    flex-wrap:wrap;
+}
+
 
 
 .carrito__aside {
@@ -128,7 +133,7 @@
 .carrito__aside__section__article {
     padding: 15px;
     font-size: 1rem;
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .carrito__aside__section__article h5{
@@ -142,17 +147,19 @@
     font-size:1.2rem;
 
 }
-
+.carrito__aside__section--buton{
+    text-align: center;
+    margin: 30px;
+}
 .carrito__comprar--buton{
     background-color: var(--colorVerdeMusgo);
     border: none;
     border-radius: 5%;
     color: var(--colorNaranjaGris);
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
     font-size: 20px;
-    text-align: center;
 }
 .carrito__comprar--buton:hover {
     color: var(--colorNaranjaL);
@@ -168,6 +175,11 @@
 }
 
 @media (min-width:768px){
+    .carrito__main img{
+     
+        margin: 10px;
+        padding: 10px;
+    }
 
 .carrito__main__section__contenedor{
     width: 80%;
@@ -183,12 +195,19 @@
     flex-wrap: wrap;
     justify-content: space-between;    
  }
-        .carrito__main__article{
-            width: 100%;
-        }
+.carrito__main__article{
+    width: 100%;
+}
+.carrito--home{
+    margin-top: 15px;     
+}
+.carrito--montos2 form{
+    margin-bottom: 20px;
+}
         .carrito__aside {
             width: 35%;
             margin: 0;
 
         }
+        
       }
