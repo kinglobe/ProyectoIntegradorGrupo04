@@ -1,6 +1,8 @@
 .carrito__main{
+    margin-top: 30px;
     padding-bottom: 50px;
     background-color: var(--colorPlantaRod);
+    display: flex;
 }
 .carrito__main h2{
     font-family: Alegreya Sans SC;
@@ -14,26 +16,25 @@
     text-align: center;
 }
 .carrito__main__section__contenedor{
-    width: 80%;
+    width: 100%;
     margin: 0 auto 5px;
     margin-top: 15px;
 }
 
 .carrito__main__section--articulos {
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;    
+    max-width: 100%;
+    margin: 1em;
 }
 .carrito__main__article{
     background-color: var(--colorNaranjaGris);
     border: none;
-    width: 55%;
+    width: 100%;
     padding: 15px;
     margin: 5 auto 5px;
     display: flex;
     border-radius: 5%;
     justify-content: space-between;    
+    gap: 10px;
 }
 .carrito__main--img{
     width: 40%;
@@ -43,8 +44,7 @@
 
 .carrito__main img{
     max-width: 100%;
-    margin: 10px;
-    padding: 10px;
+
 }
 
 .carrito__main__article--datos{
@@ -53,7 +53,7 @@
     color: var(--colorCuarzo);
     font-size: 1.5rem;
     text-align: center;
-
+    
 }
 .carrito__main__article--datos h4{
     margin-bottom: 10px;
@@ -62,15 +62,20 @@
 }
 .carrito__main__article--datos p{
     margin-bottom: 10px;
+
 }
+
 .carrito--montos{
-    display: flex;
+
     justify-content:center;    
     align-items: center;
     gap:30px;
 }
-.carrito--montos2{
-    margin-bottom:20px;
+
+.carrito__cantidad{
+    width: 50px;
+    padding: 1px;
+    margin: auto;
 }
 
 .carrito--descuento{
@@ -90,7 +95,7 @@
     border-radius: 5px;
     color: var(--colorNaranjaGris);
     padding: 5px;
-    margin-top: 35px;
+    margin-top: 5px;
     margin-bottom: 5px;;
     font-size: 1.2rem;
 
@@ -100,6 +105,10 @@
     color: var(--colorNaranjaL);
     background-color: var(--colorVerdeOliva);
 }
+.carrito--montos2{
+    flex-wrap:wrap;
+}
+
 
 
 .carrito__aside {
@@ -107,9 +116,10 @@
     color: var(--colorCuarzo);
     font-size: 1.2rem;
     background-color: var(--colorNaranjaGris);
-    width: 35%;
-    margin: 5 auto 5px;
+    max-width: 100%;
+    margin: 1em;
     border-radius: 10px;
+    
 }
 .carrito__aside__section {
     width: 100%;
@@ -133,18 +143,71 @@
 .carrito__aside--sesion{
     text-align: center;
 }
+.carrito_label--pago{
+    font-size:1.2rem;
+
+}
+.carrito__aside__section--buton{
+    text-align: center;
+    margin: 30px;
+}
 .carrito__comprar--buton{
     background-color: var(--colorVerdeMusgo);
     border: none;
     border-radius: 5%;
     color: var(--colorNaranjaGris);
     padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 20px;
-
 }
 .carrito__comprar--buton:hover {
     color: var(--colorNaranjaL);
     background-color: var(--colorVerdeOliva);
+      }
+@media (max-width: 767px){
+.carrito--montos2{
+    display: flex;
+    justify-content:center;    
+    align-items: center;
+    gap:10px;
+}
+}
+
+@media (min-width:768px){
+    .carrito__main img{
+     
+        margin: 10px;
+        padding: 10px;
+    }
+
+.carrito__main__section__contenedor{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ .carrito__main__section--articulos {
+    width: 60%;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+ }
+.carrito__main__article{
+    width: 100%;
+}
+.carrito--home{
+    margin-top: 15px;     
+}
+.carrito--montos2 form{
+    margin-bottom: 20px;
+}
+        .carrito__aside {
+            width: 35%;
+            margin: 0;
+
+        }
+        
       }
