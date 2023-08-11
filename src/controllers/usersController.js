@@ -5,5 +5,9 @@ module.exports = {
 
     login : (req,res) => {
         return res.render('users/login')
+    },
+
+    admin: (req,res) => {
+        return res.render('users/admin');
     }
 }
