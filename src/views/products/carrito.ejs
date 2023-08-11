@@ -1,50 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://kit.fontawesome.com/3d210cf143.js" crossorigin="anonymous"></script>
-    <title>Carrito de Compras</title>
-</head>
-
+<%- include('../partials/head') %>
 <body>
-    <header>
-        <nav class="header">
-            <div class="header__izquierda">
-                <a href="/"><img src="/img/logoAlmacen.png" alt=""></a>
-            </div>
-            <div class="header__centro">
-                <div class="header__titulos">
-                    <ul>
-                        <li><a href="">Nosotros</a></li>
-                        <li><a href="">Productos</a></li>
-                        <li><a href="">contacto</a></li>
-                        <li><a href="">ofertas</a></li>
-                        <li><a href="">ayuda</a></li>
-                    </ul>
-                </div>
-                <div class="header__busqueda">
-<input type="busqueda" placeholder="¿Qué estás Buscando?...">
-<button><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
 
-            </div>
-            <div class="header__botonmenu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="header__derecha">
-                <ul>
-                    <li><a href="/login">login</a></li>
-                    <li><a href="/registro">registro</a></li>
-                    <div class="carrito">
-                        <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i> </a>
-                    </div>            
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <%- include('../partials/header') %>
+    
 
 
 
@@ -55,7 +16,7 @@
         <div class="carrito__main__section--articulos">
                 <article class="carrito__main__article">
                     <figure class="carrito__main--img">
-                        <img src="/img/vinos/00103.jpg" alt="">
+                        <img src="/images/vinos/00103.jpg" alt="">
                     </figure>
                     <div class="carrito__main__article--datos">
                         <h4>Vino cabernet</h4>

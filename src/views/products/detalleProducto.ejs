@@ -1,61 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Producto de compra</title>
-  <script src="https://kit.fontawesome.com/966d575446.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-
+<%- include('../partials/head') %>
 <body>
-
-  <header>
-    <nav class="header">
-      <div class="header__izquierda">
-        <a href="/"><img src="/img/logoAlmacen.png" alt=""></a>
-      </div>
-      <div class="header__centro">
-        <div class="header__titulos">
-          <ul>
-            <li><a href="">Nosotros</a></li>
-            <li><a href="">Productos</a></li>
-            <li><a href="">contacto</a></li>
-            <li><a href="">ofertas</a></li>
-            <li><a href="">ayuda</a></li>
-          </ul>
-        </div>
-        <div class="header__busqueda">
-          <input type="busqueda" placeholder="¿Qué estás Buscando?...">
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-
-      </div>
-      <div class="header__botonmenu">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-      <div class="header__derecha">
-        <ul>
-          <li><a href="/login">login</a></li>
-          <li><a href="/registro">registro</a></li>
-          <div class="carrito">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-
-
-        </ul>
-      </div>
-
-
-    </nav>
-
-  </header>
+    <%- include('../partials/header') %>
 
   <main class="detalle-producto-main">
     <section class="product-details">
         <div class="image-container">
-          <img src="/img/vinos/1565708783_trivento-reserve-malbec-2018-2-19.png" alt="vino">
+          <img src="/images/vinos/1565708783_trivento-reserve-malbec-2018-2-19.png" alt="vino">
         </div>
         <div class="product-details-container">
           <div class="description-prev">
@@ -118,9 +71,9 @@
     </section>
   </aside>
 
-  <footer>
-    <!-- Pie de página -->
-  </footer>
+  
+  
+      <%- include('../partials/footer') %>
   </div>
 
 </body>

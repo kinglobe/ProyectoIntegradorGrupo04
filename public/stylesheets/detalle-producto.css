@@ -2,9 +2,7 @@
   margin-top: 30px;
 }
 
-/* header {
-  margin-bottom: 30px; manito, esto modifica el header para todos, lo que tendrias que hacer es meterle un margin-top al que queres separar del header. 
-} */
+
 
 .product-details {
   display: flex;
