@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body class="login__body">
+
+    <%- include('../partials/header') %>
+
+
+    <main class="login__main">
+            <figure class="registro_logo">
+                <a href="/"><img src="/images/logoAlmacen.png" alt=""></a>
+                </figure>
+
+    <h1>Inicia tu sesión</h1>
+
+    <div class="login__main--subt">
+        <h4>Ingresa para poder comprar con mayor facilidad</h4>
+    </div>
+
+    <form action="login__main--form">
+        <div class="login__main--mail">
+        <input class="login--dato" type="email" name="correo" id="correo" placeholder="Ingrese su email">
+        </div>
+        
+        <div class="login__main--pass">
+        <input class="login--dato" type="password" name="password" id="contraseña" placeholder="Ingrese su Contraseña">
+        </div>
+        
+        <div class="login__main--sesion">
+            <input class="login__main--buton" type="submit" value="Iniciar Sesión">
+        </div>
+
+        <div class="googlefacebook">
+            <h3>o inicia sesion con</h3>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+
+        <div class="login__main--registro">
+            <p><label for="">¿Primera vez aquí?  </label>
+            <a class="login--registro" href="registro">Crea tu cuenta</a></p>
+        </div>
+
+    </form>
+
+        <div class="login--term">
+            <p>Al continuar, aceptas los <a class="login--condiciones" href="condiciones">Terminos y Condiciones y la Politica de Privacidad</a> de Almacaen Regional</p>
+        </div>
+
+    </main>
+
+    <%- include('../partials/footer') %>
+
+</body>
+</html>
