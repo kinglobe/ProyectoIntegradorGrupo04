@@ -1,14 +1,14 @@
 [
    {
       "id": "900832c5-f01e-42fc-a63f-a5934b718c01",
-      "name": "Alfajor frutal",
+      "name": "Alfajor Guaymayen frutal",
       "brand": "Guaymayen",
       "description": "Dulce de Leche / Chocolate / Fruta",
-      "category-Type": "Alfajor",
-      "category-dest": "", 
+      "categoryType": "Alfajor",
+      "categoryDestacad": "in-sale", 
       "price": 100,
       "discount": 10,
-      "image": "",
+      "image": "Guaymayen_n.jpg",
       "stock": ""
    },
    {
@@ -16,11 +16,23 @@
       "name": "Alfajor Musse",
       "brand": "Cachafaz",
       "description": "Musse de Chocolate blanco y negro",
-      "category-Type": "Alfajor",
-      "category-dest": "", 
+      "categoryType": "Alfajor",
+      "categoryDestacad": "visited", 
       "price": 120,
       "discount": 10,
-      "image": "",
+      "image": "cahafaz1.jpg",
+      "stock": ""
+   },
+   {
+      "id": "900832c5-f01e-42fc-a63f-a5934b718c34",
+      "name": "Alfajor Artesanal",
+      "brand": "Region Norte",
+      "description": "EL mas esquisito baño de chocolate con crocantes de frutos secos en dulce de leche",
+      "categoryType": "Alfajor",
+      "categoryDestacad": "in-sale", 
+      "price": 480,
+      "discount": 10,
+      "image": "artesanales.jpg",
       "stock": ""
    },
    {
@@ -28,11 +40,11 @@
       "name": "Alfajor Havanna",
       "brand": "Havanna",
       "description": "Dos galletitas rellenas con una deliciosa conbinación de mucho dulce de leche, castañas de cajú y nueces, cubierta de una capa del mas puro chocolate",
-      "category-Type": "Alfajor",
-      "category-dest": "",
+      "categoryType": "Alfajor",
+      "categoryDestacad": "more-sale",
       "price": 340,
       "discount": 0,
-      "image": "",
+      "image": "havanna.jpg",
       "stock": ""
    },
    {
@@ -40,11 +52,11 @@
       "name": "Vino Republica del Malbec",
       "brand": "Riccitelli",
       "description": "Un malbec con aroma a frutos rojos, con una graduacion alcoholica de 14%",
-      "category-Type": "Vino",
-      "category-dest": "", 
+      "categoryType": "Vino",
+      "categoryDestacad": "more-sale", 
       "price": 16000,
       "discount": 10,
-      "image": "",
+      "image": "REPUBLICA2019-01.jpg",
       "stock": ""
    },
    {
@@ -52,11 +64,11 @@
       "name": "Vino Vultorno Viña Cobos",
       "brand": "Cobos",
       "description": "Un vino que te delitara, un Cabernet Sauvignon",
-      "category-Type": "Vino",
-      "category-dest": "",
+      "categoryType": "Vino",
+      "categoryDestacad": "in-sale",
       "price": 850000,
       "discount": 0,
-      "image": "",
+      "image": "vultorno-estuche.jpg",
       "stock":""
    },
    {
@@ -64,11 +76,11 @@
       "name": "Felipe Rutini 1989",
       "brand": "Felipe Rutini",
       "description": "Cosecha 1989, petencial de guarda 30 años. Etiqueta ultra premiun",
-      "category-Type": "Vino",
-      "category-dest": "", 
+      "categoryType": "Vino",
+      "categoryDestacad": "visited", 
       "price": 160000,
       "discount": 10,
-      "image": "",
+      "image": "estuche-rutini-cabernet-malbec-750-ml.jpg",
       "stock": ""
    },
    {
@@ -76,11 +88,11 @@
       "name": "Rutini Sauvignon Blanc",
       "brand": "Felipe Rutini",
       "description": "Cosecha año 2022, Amarillo brillante, con reflejos verdosos. Internamente aromatico, de caracter citrico que recuerda al pomelo rosado y algunos toques herbáceos. Frutado y fresco en boca. Etiqueta ultra premiun",
-      "category-Type": "Vino",
-      "category-dest": "", 
+      "categoryType": "Vino",
+      "categoryDestacad": "visited", 
       "price": 560000,
       "discount": 10,
-      "image": "",
+      "image": "Rutini-Sauvignon-Blanc.png",
       "stock": ""
    },
    {
@@ -88,11 +100,11 @@
       "name": "Yerba Mate Origen",
       "brand": "Origen",
       "description": "Yerba mate sabor barbacuá, artesanal, energizante",
-      "category-Type": "Yerba", 
-      "category-dest": "",
+      "categoryType": "Yerba", 
+      "categoryDestacad": "visited",
       "price": 1200,
       "discount": 10,
-      "image": "",
+      "image": "yerba-orig.png",
       "stock": ""
    },
    {
@@ -100,11 +112,11 @@
       "name": "Yerba Mate La Buena",
       "brand": "La Buena",
       "description": "Yerba mate elaborada con palo, compuesta con poleo. No produce acidez",
-      "category-Type": "Yerba", 
-      "category-dest": "", 
+      "categoryType": "Yerba", 
+      "categoryDestacad": "more-sale", 
       "price": 1200,
       "discount": 10,
-      "image": "",
+      "image": "yerba-buena.png",
       "stock": ""
    },
    {
@@ -112,11 +124,11 @@
       "name": "Yerba Jactancia",
       "brand": "Jactancia",
       "description": "Sabor ahumado auténtico y delicioso, ideal para mateadas. Propiedades antixidante y baja de polvo",
-      "category-Type": "Yerba", 
-      "category-dest": "", 
+      "categoryType": "Yerba", 
+      "categoryDestacad": "in-sale", 
       "price": 1200,
       "discount": 10,
-      "image": "",
+      "image": "Jactancia.png",
       "stock": ""
    },
    {
@@ -124,11 +136,11 @@
       "name": "Yerba mate Canarias",
       "brand": "Canarias",
       "description": "Yerba mate tradicional coba bajo contenido de polvo.",
-      "category-Type": "Yerba", 
-      "category-dest": "", 
+      "categoryType": "Yerba", 
+      "categoryDestacad": "more-sale", 
       "price": 1200,
       "discount": 10,
-      "image": "",
+      "image": "canarias.jpg",
       "stock": ""
    }
 ]

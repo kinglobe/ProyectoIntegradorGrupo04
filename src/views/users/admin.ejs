@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
+<%- include('../partials/head', { title : 'ADMINISTRADOR' }) %>
 
     <body>
 
@@ -27,26 +27,131 @@
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active " id="nav-home" role="tabpanel"
                                         aria-labelledby="nav-home-tab" tabindex="0">
-                                        <div class="d-flex flex-column gap-2 flex-md-row justify-content-between my-3">
+                                        <div class="d-flex flex-column gap-2 flex-md-row justify-content-between my-4">
                                             <div class="d-flex flex-column gap-2 flex-md-row">
-                                                <a href="/products/productAdd" class="btn btn-dark"><i class="fas fa-plus"></i>Agregar</a>
+                                                <a href="/products/productAdd" class="btn btn-dark"><i
+                                                        class="fas fa-plus"></i>Agregar</a>
                                                 <a href="/products/productEdit" class="btn btn-dark">Modificar</a>
                                             </div>
                                             <form action="/products/search"
-                                                class="d-flex flex-column flex-md-row  gap-2" method="GET">
+                                                class="d-flex flex-column flex-md-row  gap-6" method="GET">
                                                 <select class="form-select" aria-label="Default select example">
-                                                    <option selected hidden>Filtrar por marca</option>
+                                                    <option selected hidden>Filtrar por categoria</option>
                                                     <option value="1">Vinos</option>
                                                     <option value="2">Alfajores</option>
                                                     <option value="3">Yerbas</option>
                                                 </select>
-
                                                 <input type="text" class="form-control" placeholder="Buscar..."
                                                     name="keyword">
                                                 <button type="submit" class="btn btn-dark">
                                                     <i class="fas fa-search"></i>
                                                 </button>
                                             </form>
+                                        </div>
+                                        <!-- FORMULARIO -->
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Nombre</th>
+                                                        <th scope="col">Marca</th>
+                                                        <th scope="col">Precio</th>
+                                                        <th scope="col">Descuento</th>
+                                                        <th scope="col">Precio Final</th>
+                                                        <th scope="col">Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <% products.forEach(({id, name, brand, price, discount, image,
+                                                        description})=> { %>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <%= id %>
+                                                            </th>
+                                                            <td>
+                                                                <%= name %>
+                                                            </td>
+                                                            <td>
+                                                                <%= brand %>
+                                                            </td>
+                                                            <td>
+                                                                <%= price %>
+                                                            </td>
+                                                            <td>
+                                                                <%= discount %>
+                                                            </td>
+                                                            <td>
+                                                                <%= price - (discount * price /100) %>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
+
+                                                                    <!-- Button trigger modal -->
+                                                                    <button type="button" class="btn btn-sm btn-primary"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#exampleModal<%= id %>">
+                                                                        <i class="fa-solid fa-eye"></i>
+                                                                    </button>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="exampleModal<%= id %>"
+                                                                        tabindex="-1"
+                                                                        aria-labelledby="exampleModalLabel"
+                                                                        aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h1 class="modal-title fs-5"
+                                                                                        id="exampleModalLabel">
+                                                                                        <%= name %>
+                                                                                    </h1>
+                                                                                    <button type="button"
+                                                                                        class="btn-close"
+                                                                                        data-bs-dismiss="modal"
+                                                                                        aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="row">
+                                                                                        <div class="col-12 col-md-6">
+                                                                                            <img class="figure-img img-fluid rounded"
+                                                                                                src="/images/products/<%= image %>"
+                                                                                                alt="">
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="col-12 col-md-6 my-auto">
+
+                                                                                            <h3>$ <%=
+                                                                                                    price-(discount*price/100)%>
+                                                                                            </h3>
+                                                                                            <p>
+                                                                                                <%= description %>
+                                                                                            </p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <a href="/products/productEdit"
+                                                                        class="btn btn-sm btn-success"><i
+                                                                            class="fa-solid fa-pen-to-square"></i></a>
+
+
+                                                                    <button type="button" class="btn btn-sm btn-danger"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#modalDelete">
+                                                                        <i class="fa-solid fa-trash-can"></i>
+                                                                    </button>
+                                                                </div>
+
+                                                            </td>
+                                                        </tr>
+                                                        <% }) %>
+
+                                                </tbody>
+                                            </table>
                                         </div>
 
                                         <div class="tab-pane fade" id="nav-profile" role="tabpanel"

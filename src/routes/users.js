@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
-const usersController = require('../controllers/usersController')
+const {registro, login, admin} = require('../controllers/usersController')
  
+/* /users */
 
+router.get('/registro', registro);
 
-router.get('/registro', usersController.registro);
+router.get('/login', login);
 
-router.get('/login', usersController.login);
-
-router.get('/admin', usersController.admin);
+router.get('/admin', admin);
 
 
 

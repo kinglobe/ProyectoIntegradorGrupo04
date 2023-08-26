@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %>
+<%- include('../partials/head', {
+    title : 'AGREGAR'
+}) %>
 
     <body>
         <%- include('../partials/header') %>
@@ -14,17 +16,20 @@
                             </div>
                             <div class="card-body">
                                 <form action="" method="POST" class="row">
-                                    <div class="col-12 col-md-6 mb-3">
+                                    <div class="col-12 col-md-6 col-lg-12 mb-3">
                                         <label for="formGroupExampleInput" class="form-label">Nombre</label>
                                         <input type="text" class="form-control" id="formGroupExampleInput"
                                             placeholder="Nombre del producto" name="name">
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Categoria</label>
-                                        <select class="form-select" aria-label="Default select example" name="brand">
-                                            <option selected hidden value="">Seleccione...</option>
-                                        </select>
+                                        <label for="brand" class="form-label">Marca</label>
+                                        <input type="text" class="form-control" id="brand" name="brand">
                                     </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <label for="categoryType" class="form-label">Categoria</label>
+                                        <input type="text" class="form-control" id="categoryType" name="categoryType">
+                                    </div>
+                                    
                                     <div class="col-12 col-md-6 mb-3">
                                         <label for="price" class="form-label">Precio</label>
                                         <input type="number" class="form-control" id="price" name="price">
@@ -47,8 +52,6 @@
                                         <button class="btn btn-success" type="submit">Guardar cambios</button>
                                         
                                     </div>
-                                    
-                                   
 
                                 </form>
                             </div>

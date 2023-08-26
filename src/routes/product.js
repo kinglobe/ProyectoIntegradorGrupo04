@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
-const productController = require('../controllers/productsController')
-/* / */
-router.get('/detalleProducto', productController.products);
-router.get('/carrito', productController.carrito);
-router.get('/productAdd', productController.add);
-router.get('/productEdit', productController.edit);
+const {detail, carrito, add, edit, create} = require('../controllers/productsController')
+/* /products */
+router.get('/detalleProducto/:id', detail);
+router.get('/carrito', carrito);
+router.get('/productAdd', add);
+router.post('/productAdd', create)
+router.get('/productEdit', edit);
 
 
 
