@@ -1,5 +1,7 @@
-module.exports = {
-    add: (req,res) => {
-        return res.render('products/productAdd')
-    },
+module.exports = (req,res) => {
+    const products = readJSON('products.json');
+
+    return res.render('products/productAdd',{
+        products
+    })
 }
