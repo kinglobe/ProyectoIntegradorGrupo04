@@ -9,7 +9,8 @@
       "price": 100,
       "discount": 10,
       "image": "Guaymayen_n.jpg",
-      "stock": ""
+      "stock": null,
+      "createdAt": "2023-08-27T02:29:14.940Z"
    },
    {
       "id": "900832c5-f01e-42fc-a63f-a5934b718c02",
@@ -115,9 +116,10 @@
       "categoryType": "Yerba",
       "categoryDestacad": "more-sale",
       "price": 1200,
-      "discount": 10,
+      "discount": 15,
       "image": "yerba-buena.png",
-      "stock": ""
+      "stock": null,
+      "createdAt": "2023-08-27T11:02:25.652Z"
    },
    {
       "id": "900832c5-f01e-42fc-a63f-a5934b718b84",
@@ -142,27 +144,5 @@
       "discount": 10,
       "image": "canarias.jpg",
       "stock": ""
-   },
-   {
-      "id": "4ffecf5b-304a-47e1-8983-908867cfb9c2",
-      "name": "Afajor Jorjito",
-      "brand": "Jorgito",
-      "categoryType": "Alfajor",
-      "price": 120,
-      "discount": 10,
-      "description": "Un clasico",
-      "creatAt": "2023-08-26T20:47:04.153Z"
-   },
-   {
-      "id": "3a4b0527-5bf6-4ee8-93c0-dad05f8225ac",
-      "name": "Afajor Jorjito",
-      "brand": "Jorgito",
-      "categoryType": "Alfajor",
-      "price": 120,
-      "discount": 15,
-      "description": "Un clásico de años, con mundiales",
-      "creatAt": "2023-08-26T20:48:52.345Z",
-      "stock": null,
-      "createdAt": "2023-08-27T10:56:21.567Z"
    }
 ]

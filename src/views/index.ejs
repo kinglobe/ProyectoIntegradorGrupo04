@@ -60,78 +60,23 @@
         <section class="home__main__section">
             <h2>Productos más vendidos</h2>
             <div class="home__main__section__contenedor-articulos">
-                <% products.forEach(product => { %>
-                    <article class="home__main__article">
-                        <a href="/products/detalleProducto/<%= product.id %>">
-                            <figure class="home__main__article__figure">
-                                <img src="/images/products/<%= product.image %>" alt="">
-                            </figure>
-    
-                            <div class="home__main__article__contendeor--precio-descuento-descr">
-                                <i class="fa-solid fa-truck"></i>
-                                <p class="precio">$<%= product.price %></p>
-                                <p class="descuento"><%= product.discount %>% off</p>
-                                <h4><%= product.name %></h4>
-                            </div>
-                        </a>
-                    </article>
+                <% visited.forEach(product => { %>
+                    <%- include('partials/products',{
+                        ...product,
+                        toThousand
+                    }) %>
                 <% }) %>
         </section>
 
         <section class="home__main__section">
             <h2>Productos destacados</h2>
             <div class="home__main__section__contenedor-articulos">
-                <article class="home__main__article">
-                    <a href="/products/detalleProducto">
-                        <figure class="home__main__article__figure">
-                            <img src="/images/vinos/00103.jpg" alt="">
-                        </figure>
-                        <div class="home__main__article__contendeor--precio-descuento-descr">
-                            <p class="precio">$6.770</p>
-                            <p class="descuento">40% off</p>
-                            <h4>Vino Cabernet</h4>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="home__main__article">
-                    <a href="/products/detalleProducto">
-                        <figure class="home__main__article__figure">
-                            <img src="/images/alfajores/havanna.jpg" alt="">
-                        </figure>
-                        <div class="home__main__article__contendeor--precio-descuento-descr">
-                            <p class="precio">$10.000</p>
-                            <p class="descuento">20% off</p>
-                            <h4>Cajas de Alfajor</h4>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="home__main__article">
-                    <a href="/products/detalleProducto">
-                        <figure class="home__main__article__figure">
-                            <img src="/images/yerbas/canarias.jpg" alt="">
-                        </figure>
-                        <div class="home__main__article__contendeor--precio-descuento-descr">
-                            <p class="precio">$750</p>
-                            <p class="descuento">10% off</p>
-                            <h4>Yerba</h4>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="home__main__article">
-                    <a href="/products/detalleProducto">
-                        <figure class="home__main__article__figure">
-                            <img src="/images/alfajores/surtidos.jpg" alt="">
-                        </figure>
-                        <div class="home__main__article__contendeor--precio-descuento-descr">
-                            <p class="precio">$3.500</p>
-                            <p class="descuento">5% off</p>
-                            <h4>Alfajor</h4>
-                        </div>
-                    </a>
-                </article>
+                <% sale.forEach(product => { %>
+                    <%- include('partials/products',{
+                        ...product,
+                        toThousand
+                    }) %>
+                <% }) %>
             </div>
         </section>
 
@@ -139,61 +84,12 @@
             <h2>Ofertas</h2>
             
             <div class="home__main__section__contenedor-articulos">
-                <article class="home__main__article">
-                    <a href="/products/detalleProducto">
-                        <figure class="home__main__article__figure">
-                            <img src="/images/vinos/00103.jpg" alt="">
-                        </figure>
-                        <div class="home__main__article__contendeor--precio-descuento-descr">
-                            <i class="fa-solid fa-truck"></i>
-                            <p class="precio">$6.770</p>
-                            <p class="descuento">40% off</p>
-                            <h4>Vino Cabernet</h4>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="home__main__article">
-                    <a href="/products/detalleProducto">
-                        <figure class="home__main__article__figure">
-                            <img src="/images/alfajores/havanna.jpg" alt="">
-                        </figure>
-                        <div class="home__main__article__contendeor--precio-descuento-descr">
-                            <i class="fa-solid fa-truck"></i>
-                            <p class="precio">$10.000</p>
-                            <p class="descuento">20% off</p>
-                            <h4>Cajas de Alfajor</h4>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="home__main__article">
-                    <a href="/products/detalleProducto">
-                        <figure class="home__main__article__figure">
-                            <img src="/images/yerbas/canarias.jpg" alt="">
-                        </figure>
-                        <div class="home__main__article__contendeor--precio-descuento-descr">
-                            <i class="fa-solid fa-truck"></i>
-                            <p class="precio">$750</p>
-                            <p class="descuento">10% off</p>
-                            <h4>Yerba</h4>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="home__main__article">
-                    <a href="/products/detalleProducto">
-                        <figure class="home__main__article__figure">
-                            <img src="/images/alfajores/surtidos.jpg" alt="">
-                        </figure>
-                        <div class="home__main__article__contendeor--precio-descuento-descr">
-                            <i class="fa-solid fa-truck"></i>
-                            <p class="precio">$3.500</p>
-                            <p class="descuento">5% off</p>
-                            <h4>Alfajor</h4>
-                        </div>
-                    </a>
-                </article>
+                <% more.forEach(product => { %>
+                    <%- include('partials/products',{
+                        ...product,
+                        toThousand
+                    }) %>
+                <% }) %>
             </div>
         </section>
 
