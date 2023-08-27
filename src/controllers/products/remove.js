@@ -8,5 +8,5 @@ module.exports = (req,res) => {
 
    writeJSON(productsModify, 'products.json')
 
-   return res.redirect('/admin')
+   return res.redirect('/users/admin')
 }

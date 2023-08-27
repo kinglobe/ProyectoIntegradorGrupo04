@@ -31,7 +31,7 @@
                                             <div class="d-flex flex-column gap-2 flex-md-row">
                                                 <a href="/products/productAdd" class="btn btn-dark"><i
                                                         class="fas fa-plus"></i> Agregar</a>
-                                                
+
                                             </div>
                                             <form action="/products/search"
                                                 class="d-flex flex-column flex-md-row  gap-6" method="GET">
@@ -141,9 +141,46 @@
 
                                                                     <button type="button" class="btn btn-sm btn-danger"
                                                                         data-bs-toggle="modal"
-                                                                        data-bs-target="#modalDelete">
+                                                                        data-bs-target="#modalDelete<%= id%>">
                                                                         <i class="fa-solid fa-trash-can"></i>
                                                                     </button>
+                                                                    <div class="modal fade" id="modalDelete<%= id%>"
+                                                                        tabindex="-1" aria-labelledby="modalDeleteLabel"
+                                                                        aria-hidden="true">
+                                                                        <div class="modal-dialog">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h1 class="modal-title fs-5"
+                                                                                        id="modalDeleteLabel">
+                                                                                        Advertencia
+                                                                                    </h1>
+                                                                                    <button type="button"
+                                                                                        class="btn-close"
+                                                                                        data-bs-dismiss="modal"
+                                                                                        aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <p>¿Estás seguro de querer eliminar
+                                                                                        el
+                                                                                        producto <b>
+                                                                                            <%= name%>
+                                                                                        </b>?</p>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button"
+                                                                                        class="btn btn-secondary"
+                                                                                        data-bs-dismiss="modal">Cancelar</button>
+                                                                                    <form
+                                                                                        action="/products/remove/<%= id%>?_method=DELETE"
+                                                                                        method="POST"><button
+                                                                                            type="submit"
+                                                                                            class="btn btn-danger">Eliminar</button>
+                                                                                    </form>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
 
                                                             </td>
