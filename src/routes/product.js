@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const multer = require('multer');
+
 const {detail, carrito, add, edit, create, update, remove} = require('../controllers/productsController')
 /* /products */
 router.get('/detalleProducto/:id', detail);

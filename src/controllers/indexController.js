@@ -7,10 +7,16 @@ module.exports = {
 		const products = readJSON('products.json');
 
         return res.render('index',{
-			products/* ,
-			visited : products.filter(products => products.category-dest === 'visited'),
-			sale: products.filter(products => products.category-dest === 'in-sale'),
-			more: products.filter(products => products.category-dest === 'more-sale'),
+			visited : products.filter(products => products.categoryDestacad === 'visited'),
+			sale: products.filter(products => products.categoryDestacad === 'in-sale'),
+			more: products.filter(products => products.categoryDestacad  === 'more-sale'),
+			toThousand
+			
+			
+			
+			/* ,
+			,
+			
 			toThousand  */
 		})
     }
