@@ -151,7 +151,9 @@
       "categoryType": "Alfajor",
       "price": 120,
       "discount": 10,
-      "description": "Un clasico",
-      "creatAt": "2023-08-26T20:47:04.153Z"
+      "description": "Un clasico de año",
+      "creatAt": "2023-08-26T20:47:04.153Z",
+      "stock": null,
+      "createdAt": "2023-08-27T19:59:09.693Z"
    }
 ]
