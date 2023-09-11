@@ -5,7 +5,12 @@ const Product = require('../../data/products');
 module.exports = (req, res) => {
     const products = readJSON('products.json');
 
-    let newProducts = new Product(req.body);
+    let newData =  {
+        ...req.body,
+        image: req.file ? req.file.filename : null
+    }
+
+    let newProducts = new Product(newData);
     products.push(newProducts);
 
     writeJSON(products, 'products.json')

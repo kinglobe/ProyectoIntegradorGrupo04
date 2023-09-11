@@ -33,8 +33,9 @@
       "categoryDestacad": "in-sale",
       "price": 480,
       "discount": 10,
-      "image": "artesanales.jpg",
-      "stock": ""
+      "image": "1694399791975_products_.webp",
+      "stock": null,
+      "createdAt": "2023-09-11T02:36:31.978Z"
    },
    {
       "id": "900832c5-f01e-42fc-a63f-a5934b718c04",
@@ -130,8 +131,9 @@
       "categoryDestacad": "in-sale",
       "price": 1200,
       "discount": 10,
-      "image": "Jactancia.png",
-      "stock": ""
+      "image": "1694400445162_products_.jpg",
+      "stock": null,
+      "createdAt": "2023-09-11T02:47:25.166Z"
    },
    {
       "id": "900832c5-f01e-42fc-a63f-a5934b718x84",
@@ -144,20 +146,18 @@
       "discount": 10,
       "image": "canarias.jpg",
       "stock": ""
-<<<<<<< HEAD
    },
    {
-      "id": "4ffecf5b-304a-47e1-8983-908867cfb9c2",
-      "name": "Afajor Jorjito",
-      "brand": "Jorgito",
-      "categoryType": "Alfajor",
-      "price": 120,
+      "id": "d2bbffd7-a483-4c09-bca1-dec2de40172a",
+      "name": "yerba jactancia",
+      "brand": "sdaa",
+      "categoryType": "",
+      "price": 1500,
       "discount": 10,
-      "description": "Un clasico de año",
-      "creatAt": "2023-08-26T20:47:04.153Z",
+      "description": "mejor yerba",
+      "image": "1694400251529_products_.webp",
+      "creatAt": "2023-09-02T20:33:08.834Z",
       "stock": null,
-      "createdAt": "2023-08-27T19:59:09.693Z"
-=======
->>>>>>> 6083e9ad4934ecff9ab87d0167ff898083a4fa56
+      "createdAt": "2023-09-11T02:44:11.531Z"
    }
 ]
