@@ -14,10 +14,17 @@ module.exports = {
 			
 			
 			
-			/* ,
-			,
 			
-			toThousand  */
 		})
+    },
+	admin : (req,res) => { //se agrega admin para hacer el bloqueo en la busqueda directa
+
+        
+        const products = readJSON('products.json');
+        
+        return res.render('admin', {
+            products,
+            
+        })
     }
 }

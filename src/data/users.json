@@ -1,0 +1,11 @@
+[
+   {
+      "id": "b0584e67-2af6-4a9e-8355-be2138ee316f",
+      "name": "omar",
+      "surname": "zerpa",
+      "email": "omarzerpa316@gmail.com",
+      "password": "$2a$10$ITSbKT5b8t96EUNxpE9nxOIXPvHZMqZddWy4mTjQkVlul0uqN/ezW",
+      "rol": "admin",
+      "birthday": null
+   }
+]

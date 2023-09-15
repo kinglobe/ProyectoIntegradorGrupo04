@@ -1,15 +1,22 @@
 var express = require('express');
 var router = express.Router();
-const {registro, login, admin} = require('../controllers/usersController')
- 
+const {register, processRegister, login, processLogin, profile, updateProfile, admin, logout} = require('../controllers/usersController');
+const registerValidator = require('../validations/registerValidator');
+const loginValidator = require('../validations/loginValidator');
+const checkUserLogin = require('../middlewares/checkUserLogin');
+
 /* /users */
 
-router.get('/registro', registro);
+router
+.get('/register', register)
+.post('/register',registerValidator, processRegister)
 
-router.get('/login', login);
-
-router.get('/admin', admin);
-
+.get('/login', login)
+.post('/login', loginValidator, processLogin)
+.get('/profile', checkUserLogin, profile)
+.put('/update', updateProfile)
+.get('/admin',  admin)
+.get('/logout', logout)
 
 
 module.exports = router;
