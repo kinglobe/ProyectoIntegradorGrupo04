@@ -22,7 +22,7 @@ module.exports = {
         
         const products = readJSON('products.json');
         
-        return res.render('admin', {
+        return res.render('users/admin', {
             products,
             
         })

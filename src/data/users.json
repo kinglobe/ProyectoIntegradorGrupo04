@@ -7,5 +7,14 @@
       "password": "$2a$10$ITSbKT5b8t96EUNxpE9nxOIXPvHZMqZddWy4mTjQkVlul0uqN/ezW",
       "rol": "admin",
       "birthday": null
+   },
+   {
+      "id": "7770d8d2-d981-41c4-8e87-eefcce5dcbe7",
+      "name": "Hugo",
+      "surname": "Avallay",
+      "email": "h40hugo@gmail.com",
+      "password": "$2a$10$rp6kJ76QSkFRDR7OhE6Gse.HTXWTD9q2lbnuv//Ag6TbG//MjJ1Mi",
+      "rol": "admin",
+      "birthday": null
    }
 ]
