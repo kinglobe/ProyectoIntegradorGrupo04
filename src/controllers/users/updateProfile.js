@@ -4,7 +4,7 @@
  */
 
 const { readJSON, writeJSON } = require('../../data');
-const login = require('./login');
+
 
 
 
@@ -52,5 +52,5 @@ module.exports = (req, res) => {
 
         writeJSON(users, 'users.json');
 
-       res.redirect('profile');
+       return res.redirect('profile');
     } */
