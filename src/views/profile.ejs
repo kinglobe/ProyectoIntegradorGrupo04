@@ -11,7 +11,7 @@
                     <a href="/"><img src="/images/logoAlmacen.png" alt=""></a>
                 </figure>
                 <h4>DATOS DE PERFIL</h4>
-                <form action="/users/updateProfile?_method=PUT" method="POST">
+                <form action="/users/update?_method=PUT" method="POST">
                     <label class="form-label" for="name">Nombre</label>
                     <input class="controls" type="text"  id="name" name="name" value="<%= name %>">
                     <label class="form-label" for="name">Apellido</label>
@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <label class="form-label" for="gender">Género</label>
-                            <select class="form-select" name="gender" id="gender" >
+                            <select class="form-select" name="gender" id="gender">
                                 <option selected hidden value="">Seleccione su género</option>
                                 <option value="v">Hombre</option>
                                 <option value="m">Mujer</option>
@@ -32,7 +32,7 @@
                     <input class="controls" type="email" id="email" name="email" value="<%= email %>">
                     
                     <div class="justify-content-center">
-                        <button class="btn btn-dark">Guardar</button>
+                        <button class="btn btn-dark" type="submit">Modificar</button>
                     </div>
 
                 </form>

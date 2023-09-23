@@ -10,11 +10,12 @@
    },
    {
       "id": "7770d8d2-d981-41c4-8e87-eefcce5dcbe7",
-      "name": "Hugo",
+      "name": "Hugo Hernan",
       "surname": "Avallay",
       "email": "h40hugo@gmail.com",
       "password": "$2a$10$rp6kJ76QSkFRDR7OhE6Gse.HTXWTD9q2lbnuv//Ag6TbG//MjJ1Mi",
       "rol": "admin",
-      "birthday": null
+      "birthday": "1986-02-20",
+      "gender": "v"
    }
 ]

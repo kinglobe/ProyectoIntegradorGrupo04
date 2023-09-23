@@ -25,8 +25,8 @@
         <div class="header__derecha">
             <ul>
                 <% if (!locals.userLogin) { %>
-                 <li><a href="/users/login">login</a></li>
-                <li><a href="/users/register">registro</a></li>
+                    <li><a href="/users/login">login</a></li>
+                    <li><a href="/users/register">registro</a></li>
                 <% } else { %>
                     <% if (userLogin.rol === "admin") { %>
                         <li><a href="/admin">admin</a></li>

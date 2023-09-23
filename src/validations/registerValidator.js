@@ -6,7 +6,7 @@ module.exports = [
         min : 2
     }).withMessage("Debe tener como mínimo dos letras")
     .bail()
-    .isAlpha('es-ES').withMessage("Solo se permiten caracteres alfabéticos"),
+    .isAlpha('es-ES', {ignore: ' '}).withMessage("Solo se permiten caracteres alfabéticos"),
     check("surname")
     .isLength({
       min: 2,
