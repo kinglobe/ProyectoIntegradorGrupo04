@@ -1,0 +1,65 @@
+.profile_section {
+    background-color: var(--colorCuarzo);
+    color: var(--colorNaranjaGris);
+    font-family: 'calibri';
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 20px;
+    padding-top: 40px;
+    border-radius: 5px;
+}
+
+.profile_section h1 {
+    font-family: Alegreya Sans SC;
+    font-size: 30px;
+    text-align: center;
+}
+
+.controls-profile {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    border: 1px solid #b3b086;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+
+.profile_section--btn {
+    text-align: center;
+}
+
+.profile_section--buton {
+    background-color: var(--colorVerdeMusgo);
+    border: none;
+    border-radius: 5%;
+    color: var(--colorNaranjaGris);
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    ;
+    font-size: 15px;
+
+}
+
+.profile_section--buton:hover {
+    color: var(--colorNaranjaL);
+    background-color: var(--colorVerdeOliva);
+}
+
+
+.profile--term {
+    text-align: center;
+    margin: 20px;
+
+}
+
+.profile--condiciones {
+    color: var(--colorPlantaRod)
+}
+
+.profile--condiciones:hover {
+    color: var(--colorVerdeOliva);
+}

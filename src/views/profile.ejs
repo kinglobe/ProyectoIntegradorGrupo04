@@ -6,33 +6,48 @@
 
         <%- include('partials/header') %>
 
-            <section class="form-register">
+            <section class="profile_section">
                 <figure class="registro_logo">
                     <a href="/"><img src="/images/logoAlmacen.png" alt=""></a>
                 </figure>
-                <h4>DATOS DE PERFIL</h4>
+                <h1>datos de perfil</h1>
                 <form action="/users/update?_method=PUT" method="POST">
-                    <label class="form-label" for="name">Nombre</label>
-                    <input class="controls" type="text"  id="name" name="name" value="<%= name %>">
-                    <label class="form-label" for="name">Apellido</label>
-                    <input class="controls" type="text"  id="surname" name="surname" value="<%= surname %>">
-                        <div class="col-12 col-md-6 mb-2">
+                    <div>
+                        <label class="form-label" for="name">Nombre</label>
+                        <input class="controls-profile" type="text" id="name" name="name" value="<%= name %>">
+                    </div>
+                    <div>
+                        <label class="form-label" for="name">Apellido</label>
+                        <input class="controls-profile" type="text" id="surname" name="surname" value="<%= surname %>">
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="col-12 col-md-5 mb-2">
                             <label class="form-label" for="birthday">Cumpleaños</label>
-                            <input class="form-control" type="date" id="birthday" name="birthday" value="<%= birthday %>">
+                            <input class="form-control" type="date" id="birthday" name="birthday"
+                                value="<%= birthday %>">
                         </div>
                         <div class="col-12 col-md-6 mb-2">
                             <label class="form-label" for="gender">Género</label>
                             <select class="form-select" name="gender" id="gender">
                                 <option selected hidden value="">Seleccione su género</option>
-                                <option value="v" <%= gender === 'v' ? 'selected' : '' %>>Hombre</option>
-                                <option value="m" <%= gender === 'm' ? 'selected' : '' %>>Mujer</option>
-                                <option value="o" <%= gender === 'o' ? 'selected' : '' %>>Prefiero no decirlo</option>
-                            </select></div>
-                            <label class="form-label" for="name">Correo</label>
-                    <input class="controls" type="email" id="email" name="email" value="<%= email %>">
-                    
-                    <div class="justify-content-center">
-                        <button class="btn btn-dark" type="submit">Modificar</button>
+                                <option value="v" <%=gender==='v' ? 'selected' : '' %>>Hombre</option>
+                                <option value="m" <%=gender==='m' ? 'selected' : '' %>>Mujer</option>
+                                <option value="o" <%=gender==='o' ? 'selected' : '' %>>Prefiero no decirlo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <label class="form-label" for="name">Correo</label>
+                    <input class="controls-profile" type="email" id="email" name="email" value="<%= email %>">
+
+                    <div class="profile_section--btn d-flex justify-content-between">
+                        <button class="profile_section--buton"><a href="/">Volver</a></button>
+                        <button class="profile_section--buton" type="submit">Modificar</button>
+                    </div>
+
+                    <div class="login--term">
+                        <p>Al continuar, aceptas los <a class="login--condiciones" href="/info/condiciones">Terminos y
+                                Condiciones
+                                y la Politica de Privacidad</a> de Almacaen Regional</p>
                     </div>
 
                 </form>
