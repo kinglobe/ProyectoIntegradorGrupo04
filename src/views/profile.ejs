@@ -14,19 +14,19 @@
                 <form action="/users/update?_method=PUT" method="POST">
                     <div>
                         <label class="form-label" for="name">Nombre</label>
-                        <input class="controls-profile" type="text" id="name" name="name" value="<%= name %>">
+                        <input class="form-control" type="text" id="name" name="name" value="<%= name %>">
                     </div>
                     <div>
                         <label class="form-label" for="name">Apellido</label>
-                        <input class="controls-profile" type="text" id="surname" name="surname" value="<%= surname %>">
+                        <input class="form-control" type="text" id="surname" name="surname" value="<%= surname %>">
                     </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="col-12 col-md-5 mb-2">
+                    <div class="d-flex justify-content-between gap-2">
+                        <div class="col-6 col-md-6 mb-2">
                             <label class="form-label" for="birthday">Cumpleaños</label>
                             <input class="form-control" type="date" id="birthday" name="birthday"
                                 value="<%= birthday %>">
                         </div>
-                        <div class="col-12 col-md-6 mb-2">
+                        <div class="col-6 col-md-6 mb-2">
                             <label class="form-label" for="gender">Género</label>
                             <select class="form-select" name="gender" id="gender">
                                 <option selected hidden value="">Seleccione su género</option>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <label class="form-label" for="name">Correo</label>
-                    <input class="controls-profile" type="email" id="email" name="email" value="<%= email %>">
+                    <input class="form-control" type="email" id="email" name="email" value="<%= email %>">
 
                     <div class="profile_section--btn d-flex justify-content-between">
                         <button class="profile_section--buton"><a href="/">Volver</a></button>
