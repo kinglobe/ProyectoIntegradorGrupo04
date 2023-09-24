@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+a{
+  text-decoration: none;
+  color: #ffffff;
+}  
+>>>>>>> 64eb760ec676007650077fe29349cc408b0048ad
   .form-register {
     background-color: var(--colorCuarzo);
     color: var(--colorNaranjaGris);
@@ -71,7 +78,7 @@
   
   .form-register .botons {
     width: 100%;
-    background: #cfc078;
+    background-color: var(--colorVerdeMusgo);
     border: none;
     padding: 8px;
     color: white;

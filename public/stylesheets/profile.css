@@ -36,11 +36,18 @@
     border: none;
     border-radius: 5%;
     color: var(--colorNaranjaGris);
+<<<<<<< HEAD
     padding: 8px;
     margin-top: 10px;
     margin-bottom: 10px;
     ;
     font-size: 15px;
+=======
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+>>>>>>> 64eb760ec676007650077fe29349cc408b0048ad
 
 }
 
