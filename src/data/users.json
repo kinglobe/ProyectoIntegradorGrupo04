@@ -17,5 +17,25 @@
       "rol": "admin",
       "birthday": "1986-02-20",
       "gender": "v"
+   },
+   {
+      "id": "ad575eb0-abf2-470f-975f-fa0d3588ecc4",
+      "name": "sabas",
+      "surname": "chicha",
+      "email": "chicha@sayayin.com",
+      "password": "$2a$10$U9QAaPzOZsOCt9zYEMLZq.sP1zqwEKSw1Ry0KPm8vqLIKyo6DCNse",
+      "rol": "user",
+      "birthday": "2006-06-06",
+      "gender": "o"
+   },
+   {
+      "id": "b36e78c7-7900-48bd-b8e2-3ba3f3641ff9",
+      "name": "Salome",
+      "surname": "Janwari",
+      "email": "josho@gmail.com",
+      "password": "$2a$10$d0OCk1p0Kpp63cGOP2Wt2ezSyAipZdAt3Z6y.KnvJA8ZgZN48veGy",
+      "rol": "user",
+      "birthday": "2023-09-29",
+      "gender": "o"
    }
 ]
