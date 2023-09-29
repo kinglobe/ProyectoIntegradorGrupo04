@@ -11,16 +11,16 @@
       <main class="detalle-producto-main">
         <section class="product-details">
           <div class="image-container">
-            <img src="/images/products/" alt="">
+            <img src="/images/products/<%= image %>" alt="">
           </div>
           <div class="product-details-container">
             <div class="description-prev">
               <a href="/favoritos">
                 <i class="fa-regular fa-heart"></i>
               </a>
-              <h2 class="name-product">Vino Trivento</h2>
+              <h2 class="name-product"><%= name %></h2>
               <p class="description--precio">Precio:</p>
-              <p class="price">$3500</p>
+              <p class="price">$ <%= price %></p>
             </div>
             <div class="product-options">
               <div class="option">
@@ -53,27 +53,12 @@
           </div>
           </div>
         </section>
-        <section class="section__description">
-          <h3>Características principales:</h3>
-          <p>Origen: Argentina</p>
-          <p>Bodega: trapiche</p>
-          <p>Volumen: 750mL</p>
-          <p>Año: 2015</p>
-          <p>Tipo de envase: botella</p>
-        </section>
+
       </main>
       <aside class="home__aside">
         <section class="section__aside--descripcion">
           <h3>Descripción:</h3>
-          <p>Disfruta de un exquisito Trapiche Malbec Finca Coletto, un vino tinto de alta calidad proveniente de la
-            prestigiosa bodega Trapiche en Mendoza, Argentina. Este Malbec del año 2015, originario del Valle de Uco, es
-            perfecto para compartir en una cena especial o para disfrutar en una noche tranquila en casa. Con sus 750 mL
-            de
-            contenido en una elegante botella, este vino es ideal para degustar en cualquier ocasión. A pesar de no ser
-            orgánico, su sabor y aroma te transportarán a los viñedos de Mendoza, donde se cultivan las mejores uvas
-            Malbec
-            del país. No pierdas la oportunidad de deleitar tu paladar con este exquisito vino Trapiche Malbec Finca
-            Coletto, una opción única y sofisticada para los amantes del buen vino.</p>
+          <p><%= description %></p>
         </section>
       </aside>
 

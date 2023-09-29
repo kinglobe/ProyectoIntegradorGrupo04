@@ -2,6 +2,8 @@ const {readJSON} = require('../data');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+
+
 module.exports = {
     index: (req, res) => {
 		const products = readJSON('products.json');
@@ -26,5 +28,15 @@ module.exports = {
             products,
             
         })
-    }
+    },
+    search: (req, res) => {
+        const products = readJSON('products.json');
+		const keywords = req.query.keywords
+		const results = products.filter(product=> product.name.toLowerCase().includes(keywords.toLowerCase()))
+		return res.render('results',{
+			results,
+			toThousand,
+			keywords
+		})
+	},
 }
