@@ -67,7 +67,7 @@
     margin: 0 auto;
     width: 80%;
     height: 200px;
-    object-fit: cover;
+    object-fit: scale-down;
 
 }
 
@@ -75,7 +75,7 @@
     width: 100%;
     padding: 20px;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
 
 }
 
@@ -251,6 +251,24 @@
 
 @media (min-width:1024px) {
  
+    .home__main__article {
+        max-width: 260px;
+        display: flex;
+        flex-flow: column;
+        border-radius: 6px;
+        box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.2);
+        background-color: rgb(255, 255, 255);
+        transition-property: box-shadow;
+        transition-duration: 0.3s;
+    }
+    .home__main__article:hover {
+        box-shadow: 0 0 1.8em rgba(0, 0, 0, 0.2);
+    }
+
+    .home__main__article__figure img {
+        width: 100%;
+        object-fit: scale-down-down;
+    }
 
     .home__main__contenedor__articulo-yerba h3 {
         font-size: 2rem;
