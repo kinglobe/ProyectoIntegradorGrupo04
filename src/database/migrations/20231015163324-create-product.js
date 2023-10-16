@@ -1,6 +1,5 @@
 'use strict';
 
-const { toDefaultValue } = require('sequelize/types/utils');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -33,7 +32,7 @@ module.exports = {
         allowNull: false,
         refences: {
           model : {
-            tableName : 'Categories'
+            tableName : 'Categoris'
           }
         }
       },
