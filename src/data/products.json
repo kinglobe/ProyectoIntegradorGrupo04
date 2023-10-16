@@ -159,5 +159,16 @@
       "creatAt": "2023-09-02T20:33:08.834Z",
       "stock": null,
       "createdAt": "2023-09-11T02:44:11.531Z"
+   },
+   {
+      "id": "49d59146-6c10-4697-a1e1-2fc888f2249d",
+      "name": "vino",
+      "brand": "norton",
+      "categoryType": "vinos",
+      "price": 10000,
+      "discount": 5,
+      "image": "1696799812219_products_.jpg",
+      "description": "baratoooo y buenisimo",
+      "creatAt": "2023-10-08T21:16:52.223Z"
    }
 ]
