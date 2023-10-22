@@ -1,70 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head', {
-    title : 'DETALLE'
-}) %>
+<%- include('../partials/head', { title : 'DETALLE' }) %>
 
   <body>
-    <%- include('../partials/header') %>
+    <%- include('../partials/header') %>  
+    <main class="main__detalleProducto">
+      <div class="container my-5  products-wrapper">
+        <div class="product-detail">
+          <div class="row">
+            <div class="col-12 col-md-7 col-lg-6">
+              <img src="/images/products/<%= image %>" alt="product image" class="product-detail-img">
+              
+            </div>
+            <div class="col-12 col-md-5 col-lg-6 my-auto">
+              <article class="product-detail-info">
+                <span class="item__info--licence">nombre categoria</span>
+                <h2 class="product-detail-title"><%= name %></h2>
+                <p class="product-detail-description">
+                  <%= description %>
+                </p>
+                <% if (discount) { %>
+                  
+                    <span class="productDetail_precio-subrall">$<%= toThousand(price) %></span>
+                  
+                  <p class= "product-detail-priceDiscount col-12 d-flex">
+                    <span class="product-detail-price">$<%= toThousand(price-(price*discount/100).toFixed(0)) %></span>
+                    <span class="product-detail-discount"><%= discount%>% OFF</span>
+                  </p>
+                  
+                <% } else{ %>
+                  <p class="product-detail-price">
+                    $<%= toThousand(price) %>
+                  </p>
     
-      <main class="detalle-producto-main">
-        <section class="product-details">
-          <div class="image-container">
-            <img src="/images/products/<%= image %>" alt="">
-          </div>
-          <div class="product-details-container">
-            <div class="description-prev">
-              <a href="/favoritos">
-                <i class="fa-regular fa-heart"></i>
-              </a>
-              <h2 class="name-product"><%= name %></h2>
-              <p class="description--precio">Precio:</p>
-              <p class="price">$ <%= price %></p>
-            </div>
-            <div class="product-options">
-              <div class="option">
-                <div class="option-icon"><i class="fas fa-credit-card"></i></div>
-                <p class="option-label">Medio de pago</p>
-              </div>
-              <section class="card__credit">
-                <i class="fa-brands fa-cc-visa"></i>
-                <i class="fa-brands fa-cc-mastercard"></i>
-                <i class="fa-brands fa-cc-amex"></i>
-              </section>
-              <div class="option">
-                <div class="option-icon"><i class="fa-solid fa-truck"></i></div>
-                <p class="option-label">Información de envío</p>
-              </div>
-              <div class="option">
-                <div class="quantity-control">
-                  <button class="quantity-button"><i class="fas fa-minus"></i></button>
-                  <span class="quantity-number">1</span>
-                  <button class="quantity-button"><i class="fas fa-plus"></i></button>
+                <% } %>
+    
+                <!-- <ul class="actions-list">
+                  <li>
+                    <i class="fas fa-credit-card"></i>
+                    <p>Pagá en 12 cuotas sin interes</p>
+                  </li>
+                  <li>
+                    <i class="fas fa-store"></i>
+                    <p>Retiro gratis en locales del vendedor</p>
+                  </li>
+                </ul>  -->
+                <div class="col-12 d-flex flex-column gap-3">
+                  <button  type="button" class="btn btn-primary">COMPRAR AHORA</button>
+                  <button type="button" class="btn btn-light buy-now-button">AGREGAR AL CARRITO</button>
                 </div>
-              </div>
-              <section class="buttons">
-                <button class="compra">Compra</button>
-
-
-                <button class="add-to-cart">Agregar al carrito</button>
-              </section>
+                
+                
+              </article>
             </div>
           </div>
-          </div>
-        </section>
+        </div>
+      </div>
+      <section class="section__productosDetail">
+        <h3>Productos destacados</h3>
+        <%- include('../components/carousel-destacados') %>
+      </section>
 
-      </main>
-      <aside class="home__aside">
-        <section class="section__aside--descripcion">
-          <h3>Descripción:</h3>
-          <p><%= description %></p>
-        </section>
-      </aside>
+      
+    </main>  
 
-
-
-      <%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
+    <%- include('../components/scriptSlider') %>
+    
 
   </body>
 

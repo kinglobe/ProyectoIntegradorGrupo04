@@ -1,0 +1,13 @@
+<section id="destacados" class="glide">
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides ">
+            
+                <% sale.forEach(product=> { %>
+                    <li class="glide__slide">
+                        <%- include('../partials/products',{ ...product, toThousand }) %>
+                    </li>
+                <% }) %>
+        </ul>
+    </div>
+    <%- include('buttonSlider') %>
+</section>

@@ -1,380 +1,65 @@
-.detalle-producto-main {
-  margin-top: 30px;
-  
+.product-detail {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden; /* sirve para coultar todo lo que sobre sale del contenedor */
 }
 
-
-
-.product-details {
-  /* display: flex; */
-  width: 83%;
-  margin: 0px auto;
-  text-align: center;
-  /* justify-content: center; */
-}
-
-.image-container {
-  
-  border: 2px solid black;
- /*  width: 40%; */
-  padding: 0;
-  text-align: center;
-  /* color: white; */
-  background-color: white;
-  margin-bottom: 20px;
-}
-
-.image-container img {
-  text-align: center;
-  margin: 0 auto;
-  width: 40%;
+.product-detail-img {
+  width: 80%;
+  max-width: 460px;
+  max-height: 480px;
   padding: 20px;
-  /* margin-top: 60px; */
+  display: block;
+  margin: auto;
 }
 
-
-
-.product-details-container {
-  border: 2px solid black;
-  text-align: center;
-  padding: 30px 25px;
-  background-color: lightgray;
-  /* width: 59%; */
+.product-detail-info {
+  border-left: 1px solid rgb(240, 240, 240);
+  padding: 15px;
+  height: 100%;
 }
 
-.description-prev {
+.product-detail-title {
+  font-weight: 500;
+  font-size: 2.5em;
+}
+
+.product-detail-description {
+  font-size: 1.2em;
+  line-height: 1.3;
+}
+
+.product-detail-price {
+  font-size: 3.7em;
+  /* margin: 0.2em 0; */
+}
+.productDetail_precio-subrall {
+  text-decoration: line-through;
+  color: #666666;
+  font-size: 1.6em;
+}
+.product-detail-priceDiscount {
   position: relative;
 }
-
-.description-prev a {
-  color: black;
-  position: absolute;
-  top: -25px;
-  right: 0;
-  bottom: 0;
-  margin-bottom: 3px;
-}
-
-.name-product {
-  margin-bottom: 10px;
-}
-
-.description--precio,
-.price {
-  color: black;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.option {
-  margin-bottom: 18px;
-  /* text-align: center; */
-  justify-content: center;
-}
-
-.option-icon .fa-credit-card{
-  color: blue;
-}
-
-
-.option-icon .fa-truck{
-  color: green;
-}
-.card__credit {
-  margin-bottom: 20px;
-}
-
-.compra {
-  margin-bottom: 10px;
-  background-color: var(--colorVerdeOliva);
-  border-radius: 5px;
-}
-
-.add-to-cart {
-  border-radius: 5px;
-  background-color: var(--colorNaranja);
-}
-
-.section__description {
-  border: 2px solid black;
-  padding: 10px;
-  background-color: lightgray;
-  margin: 15px auto;
-  width: 65%;
-
-}
-
-.section__description {
-  text-align: center;
-}
-
-.section__description h3 {
-  margin-bottom: 8px;
-}
-
-.section__description p {
-  margin-bottom: 20px;
-}
-
-.home__aside {
-  width: 70%;
-  margin: 30px auto 0;
-
-
-}
-
-.section__aside--descripcion {
-  background-color: #ccc;
-  padding: 10px;
-  text-align: center;
-  border: 1px solid black;
-  margin-bottom: 20px;
-
-
-}
-
-.section__aside--descripcion p {
-  line-height: 1.5;
-
-}
-
-@media(min-width:768px) {
-
-
-  .product-details {
-    /* display: flex; */
-    /* width: 70%; */
-    display: flex;
-    width: 83%;
-    margin: 0px auto;
-    /*  text-align: center; */
-    /* justify-content: center; */
-  }
-  
-  .image-container {
-    
-border: 2px solid black;
-    
-width: 41%;
-    
-padding: 0px;
-    
-text-align: center;
-    
-/* color: white; */
-    
-background-color: white;
-  }
-
-  .image-container img {
-    width: 80%;
-    margin-top: 60px;
-  }
-  
-
-  .detalle-producto-main {
-    display: flex;
-    width: 70%;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 30px;
-
-
-  }
-  .product-details-container {
-    
-    width: 59%;
-  }
-
-  
-
-  .section__description {
-    margin: 1px auto;
-  }
-
-
-  .section__description {
-    width: 40%;
-    padding: 30px 10px;
-  }
-
-
-
+.product-detail-discount {
+  font-size: 1.6em;
+  color: rgb(0, 166, 80);
+  /* position: absolute; */
+  margin-top: 20px;
 }
 
 
 
-@media(min-width:1024px) {
+.buy-now-button {
+  background-color: rgb(189, 206, 242);
+}
 
-  .detalle-producto-main {
-    margin-top: 30px;
-  }
-  /*   header {
-
-    margin-bottom: 30px; esto tambien manito
-  }
- */
-
-  .detalle-producto-main {
-    display: flex;
-    width: 95%;
-
-
-
-  }
-
-  .image-container {
-    border: 2px solid black;
-    width: 45%;
-    padding: 0;
-    text-align: center;
-
-
-
-  }
-
-  .image-container img {
-    width: 40%;
-  }
-
-  .product-details-container {
-    width: 48%;
-    text-align: center;
-  }
-
-
-
-  .section__description {
-    width: 40%;
-
-
-
-
-  }
-
-
-
-
-  /* informacion-producto */
-  .product-info {
-    border: 1px solid black;
-    padding: 50px 40px;
-   
-
-
-  }
-
-  .name-product {
-    margin-bottom: 5px;
-  }
-
-  .description--precio,
-  .price {
-    color: black;
-    font-size: 25px;
-    margin-bottom: 10px;
-  }
-
-
-
-  .option {
-  /*   margin-left: 0px; */
-    display: flex;
-    align-items: center;
-    /* Alineamos los elementos verticalmente */
-  }
-
-
-
-  .option-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    
-  }
-
- 
-
-  
-
-
-  .card__credit {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 5px;
-  }
-
-
-  /* botones */
-  .buttons {
-    display: flex;
-    flex-direction: column;
-
-
-  }
-
-
-  .compra {
-    margin-bottom: 10px;
-    background-color: var(--colorVerdeOliva);
-    border-radius: 5px;
-  }
-
-  .add-to-cart {
-    border-radius: 5px;
-    background-color: var(--colorNaranja);
-  }
-
- 
-
-  /* caracteristicas principales */
-  .section__description {
-    border: 1px solid black;
-    padding: 30px;
-    background-color: lightgray;
-  }
-
-  .section__description {
-    text-align: center;
-  }
-
-  .section__description h3 {
-    margin-bottom: 8px;
-  }
-
-  .section__description p {
-    margin-bottom: 20px;
-  }
-
-
-  /* aside-descripcion */
-
-  .home__aside {
-    width: 60%;
-    margin: 30px auto 0;
-
-
-  }
-
-  .section__aside--descripcion {
-    
-    background-color: #ccc;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-
-
-  }
-
-  .section__aside--descripcion p {
-    line-height: 1.5;
-
-  }
-
+.main__detalleProducto {
+  max-width: 1024px;
+  margin: 0 auto;
+} 
+/* Stylocarousel */
+.section__productosDetail h2 {
+  font-weight: 600;
+  margin-top: 2.5em;
 }

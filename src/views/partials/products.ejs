@@ -1,17 +1,34 @@
-<article class="home__main__article">
-    <a href="/products/detalleProducto/<%= id %>">
-        <figure class="home__main__article__figure">
-            <img src="/images/products/<%= image %>" alt="">
-        </figure>
-
-        <div class="home__main__article__contendeor--precio-descuento-descr">
-            
-            <p class="precio">$<%= toThousand(price) %></p>
-            <p class="descuento"><%= discount %>% off</p>
-            <h4><%= name %></h4>
+<a href="/products/detalleProducto/<%= id %>">
+    <div class="home_producto">
+        <div class="home_producto-img">
+            <img src="/images/products/<%= image %>" alt="Vino">
         </div>
-    </a>
-</article>
+        <div class="home_info">
+            <span class="home_tipo-envio">Envio con Normalidad</span>
+            <div class="home_precio-oferta">
 
+                <% if (discount) { %>
+                    <p class="home_info-precio"><span class="home_precio-subrall" >$<%= toThousand(price) %></span></p>
+                    <span class= "home_precio">$<%=toThousand(price - (price*discount/100).toFixed(0))%></span>
+                    <span class="home_oferta"><%= discount %> % OFF</span>
 
-    
+                    <% } else{ %>
+                        <span class="home_precio">$<%= toThousand(price) %></span>
+                        
+                        <% } %>
+
+            </div>
+            <span class="home_precio-envio">Envio gratis</span>
+            <span class="home_descripcion">
+                <%= name %>
+            </span>
+            <div class="home_calificacion">
+                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                <span>19999</span>
+            </div>
+
+        </div>
+
+    </div>
+</a>

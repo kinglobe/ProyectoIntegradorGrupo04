@@ -1,107 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('./partials/head', {
-    title : 'HOME'
-}) %>
+<%- include('./partials/head', { title : 'HOME' }) %>
 
-<body>
+    <body>
 
-    <%- include('./partials/header') %>
+        <%- include('./partials/header') %>
 
-    <div class="home__banner">
-        <div class="swiper mySwiper1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="/images/banners/banner1.jpg" alt="slider1">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/images/banners/banner2.png" alt="slider2">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/images/banners/banner3.jpg" alt="slider3">
-                </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </div>
-
-    <main class="home__main">
-        <section class="home__main__section-slogan">
-            <h1>"Sabores argentinos en cada producto, ¡disfruta lo auténtico!."</h1>
-            <div class="home__main__contenedor">
-                <div class="home__main__contenedor__articulo-yerba">
-                    <img src="/images/yerbas/Yerba-mate-in-a-mug-and-bowls-800x534.jpg" alt="">
-                    <div class="contenedor__enlace-descripcion">
-                        <h3>Yerba Mate </h3>
-                        <p>"infusión con encanto"</p>
-                    </div>
-                </div>
-                <div class="home__main__contenedor__articulo2">
-                    <div class="home__main__contenedor__articulo-vino-alfajor">
-                        <img src="/images/vinos/el-mejor-vino-tinto.jpg" alt="">
-                        <div class="contenedor__enlace-descripcion">
-                            <h3>vinos</h3>
-                            <p>"Sabores que enamoran"</p>
+            <div class="home__banner">
+                <div class="swiper mySwiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/images/banners/banner1.jpg" alt="slider1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/banners/banner2.png" alt="slider2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/banners/banner3.jpg" alt="slider3">
                         </div>
                     </div>
-                    <div class="home__main__contenedor__articulo-vino-alfajor">
-                        <img src="/images/alfajores/46814.475 alfajores.jpg" alt="">
-                        <div class="contenedor__enlace-descripcion">
-                            <h3>Alfajores</h3>
-                            <p>"Dulce abrazo artesanal"</p>
-                        </div>
-                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
-        </section>
 
-        <section class="home__main__section">
-            <h5>Productos más vendidos</h5>
-            <div class="home__main__section__contenedor-articulos">
-                <% visited.forEach(product => { %>
-                    <%- include('partials/products',{
-                        ...product,
-                        toThousand
-                    }) %>
-                <% }) %>
-        </section>
+            <main class="home__main">
+                <section class="home__main__section-slogan">
+                    <h1>"Sabores argentinos en cada producto, ¡disfruta lo auténtico!."</h1>
+                    <div class="home__main__contenedor">
+                        <div class="home__main__contenedor__articulo-yerba">
+                            <img src="/images/yerbas/Yerba-mate-in-a-mug-and-bowls-800x534.jpg" alt="">
+                            <div class="contenedor__enlace-descripcion">
+                                <h3>Yerba Mate </h3>
+                                <p>"infusión con encanto"</p>
+                            </div>
+                        </div>
+                        <div class="home__main__contenedor__articulo2">
+                            <div class="home__main__contenedor__articulo-vino-alfajor">
+                                <img src="/images/vinos/el-mejor-vino-tinto.jpg" alt="">
+                                <div class="contenedor__enlace-descripcion">
+                                    <h3>vinos</h3>
+                                    <p>"Sabores que enamoran"</p>
+                                </div>
+                            </div>
+                            <div class="home__main__contenedor__articulo-vino-alfajor">
+                                <img src="/images/alfajores/46814.475 alfajores.jpg" alt="">
+                                <div class="contenedor__enlace-descripcion">
+                                    <h3>Alfajores</h3>
+                                    <p>"Dulce abrazo artesanal"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <section class="home__main__section">
-            <h5>Productos destacados</h5>
-            <div class="home__main__section__contenedor-articulos">
-                <% sale.forEach(product => { %>
-                    <%- include('partials/products',{
-                        ...product,
-                        toThousand
-                    }) %>
-                <% }) %>
-            </div>
-        </section>
+<!-- ---------------------------------------------------------------------------- -->
+                <section id="masVendidos" class=" glide home__main__section">
+                    <div class="home__detalle_section">
+                        <h2>Productos más vendidos</h2>
+                        <a class="section__link-ver-mas" href="#">Ver más</a>
+                    </div>
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides ">
 
-        <section class="home__main__section">
-            <h5>Ofertas</h5>
+                            <% visited.forEach(product=> { %>
+                                <li class="glide__slide">
+                                    <%- include('partials/products',{ ...product, toThousand }) %>
+                                </li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                    <%- include('./components/buttonSlider') %>
+                </section>
+
+<!-- ------------------------------------------------------------------------- -->
+                <section id="destacados" class="glide home__main__section">
+                    <div class="home__detalle_section">
+                        <h2>Productos destacados</h2>
+                        <a class="section__link-ver-mas" href="#">Ver más</a>
+                    </div>
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides ">
+                            
+                                <% sale.forEach(product=> { %>
+                                    <li class="glide__slide">
+                                        <%- include('partials/products',{ ...product, toThousand }) %>
+                                    </li>
+                                <% }) %>
+                        </ul>
+                    </div>
+                    <%- include('./components/buttonSlider') %>
+                </section>
+<!-- ------------------------------------------------------------------------------------ -->
+
+                <section id="ofertas" class="glide home__main__section">
+                    <div class="home__detalle_section">
+                        <h2>Ofertas</h2>
+                        <a class="section__link-ver-mas" href="#">Ver más</a>
+                    </div>
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides ">
+                            
+                                <% more.forEach(product=> { %>
+                                    <li class="glide__slide">
+                                        <%- include('partials/products',{ ...product, toThousand }) %>
+                                    </li>
+                                <% }) %>
+                        </ul>
+                    </div>
+                    <%- include('./components/buttonSlider') %>
+                </section>
+
+
+
+            </main>
+            <!-- footer -->
+            <%- include('./partials/footer') %>
+            <%- include('./components/scriptSlider') %>
             
-            <div class="home__main__section__contenedor-articulos">
-                <% more.forEach(product => { %>
-                    <%- include('partials/products',{
-                        ...product,
-                        toThousand
-                    }) %>
-                <% }) %>
-            </div>
-        </section>
-
-
-
-    </main>
-    <!-- footer -->
-    <%- include('./partials/footer') %>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="/javascripts/carousel1_swiper.js"></script>
-
-</body>
+            
+    </body>
 
 </html>
