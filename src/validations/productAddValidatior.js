@@ -6,8 +6,8 @@ module.exports = [
         .notEmpty().withMessage('El nombre del producto es obligatorio'),
     check('brand')
         .notEmpty().withMessage('La marca es requerida'),
-    check('categoryType')
-        .notEmpty().withMessage('La categoria es requerida'),
+    /* check('category')
+        .notEmpty().withMessage('La categoria es requerida'), */
     check('price')
         .notEmpty().withMessage('El precio es requerido').bail()
         .isDecimal().withMessage('El precio ingresado debe ser numerico'),

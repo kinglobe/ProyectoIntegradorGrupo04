@@ -9,9 +9,9 @@ module.exports = {
 		const products = readJSON('products.json');
 
         return res.render('index',{
-			visited : products.filter(products => products.categoryDestacad === 'visited'),
-			sale: products.filter(products => products.categoryDestacad === 'in-sale'),
-			more: products.filter(products => products.categoryDestacad  === 'more-sale'),
+			visited : products.filter(products => products.sections === 'visited'),
+			sale: products.filter(products => products.sections === 'in-sale'),
+			more: products.filter(products => products.sections  === 'more-sale'),
 			toThousand
 			
 			

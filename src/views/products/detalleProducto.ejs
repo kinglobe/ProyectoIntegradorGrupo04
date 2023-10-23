@@ -9,7 +9,7 @@
       <div class="container my-5  products-wrapper">
         <div class="product-detail">
           <div class="row">
-            <div class="col-12 col-md-7 col-lg-6">
+            <div class="col-12 col-md-7 col-lg-6 my-auto">
               <img src="/images/products/<%= image %>" alt="product image" class="product-detail-img">
               
             </div>
@@ -35,6 +35,19 @@
                   </p>
     
                 <% } %>
+                <div class="product__detail--cantidad-disponible my-4">
+                  <label class="product-detail-cantidad" for="cantidad">Cantidad:</label>
+                <select class="product-detail-disponible" id="cantidad" name="cantidad">
+                    <option value="1">1 unidad</option>
+                    <option value="2">2 unidades</option>
+                    <option value="3">3 unidades</option>
+                    <option value="4">4 unidades</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+                <span id="disponible">(3 disponibles)</span>
+                </div>
+                
+
     
                 <!-- <ul class="actions-list">
                   <li>
