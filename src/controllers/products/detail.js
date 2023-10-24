@@ -8,7 +8,7 @@ module.exports = (req,res) => {
     const id = req.params.id;
     const product = products.find(product => product.id === id)
     return res.render('products/detalleProducto',{
-        sale: products.filter(products => products.categoryDestacad === 'in-sale'),
+        sale: products.filter(products => products.sections === 'in-sale'),
         ...product,
         toThousand
     })

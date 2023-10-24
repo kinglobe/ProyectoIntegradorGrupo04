@@ -232,5 +232,18 @@
       "image": "1698035664244_products_.png",
       "description": "yerbatita que te entretiene mientras cuerias",
       "creatAt": "2023-10-23T04:34:24.261Z"
+   },
+   {
+      "id": "176efea8-8034-4410-a2dc-4fdb32a2786b",
+      "name": "Vino",
+      "brand": "Tintin",
+      "sections": "in-sale",
+      "price": 23000,
+      "discount": 0,
+      "image": "1698110608855_products_.jpg",
+      "description": "Un excelente vino para acompañar comidas marinas",
+      "creatAt": "2023-10-24T01:22:29.569Z",
+      "stock": null,
+      "createdAt": "2023-10-24T01:27:44.813Z"
    }
 ]
