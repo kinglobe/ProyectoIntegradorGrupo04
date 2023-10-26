@@ -1,54 +1,43 @@
-/* module.exports = (req,res) => {
-    return res.send(req.body)
-} 
- */
-
-const { readJSON, writeJSON } = require('../../data');
-
+const { validationResult } = require('express-validator');
+const db = require('../../database/models');
 
 module.exports = (req, res) => {
 
-    const users = readJSON("users.json");
-    const userId = req.session.userLogin.id;
-    const {name, surname,gender, birthday} = req.body;
-    console.log(userId);
+    const errors = validationResult(req);
 
+    if (errors.isEmpty()) {
+        const { name, surname, birthday, gender, about, address, city, province } = req.body
 
-    const usersModify = users.map(user =>{
-        if( user.id === userId){
-            return {
-                ...user,
-                name,
-                surname,
-                gender: req.body.gender? gender : user.gender,
-                birthday: req.body.birthday? birthday: user.birthday
+        db.User.update(
+            {
+                name: name.trim(),
+                surname: surname.trim(),
+                birthday,
+                gender,
+                about: about.trim()
+            },
+            {
+                where: {
+                    id: req.session.userLogin.id
+                }
             }
-        }
-       return user
-    });
+        )
+            .then(response => {
+                console.log(response);
+                return res.redirect('/')
+            })
+            .catch(error => console.log(error))
 
-    writeJSON(usersModify,'users.json');
-
-    
-    return res.redirect('profile')
-}  
-
-/*     if (!req.session.user) {
-        return res.redirect('register');
     } else {
-        const users = readJSON("users.json");
+        db.User.findByPk(req.session.userLogin.id)
+            .then(user => {
+                return res.render('profile', {
+                    ...user.dataValues,
+                    errors: errors.mapped()
+                })
+            })
+            .catch(error => console.log(error))
+    }
 
-        const id = req.session.user.id;
 
-        const userFind = users.find(user => user.id === id);
-
-        const {name, surname, email, birthday} = req.body;
-        userFind.name = name;
-        userFind.surname = surname;
-        userFind.email = email;
-        userFind.birthday = birthday;
-
-        writeJSON(users, 'users.json');
-
-       return res.redirect('profile');
-    } */
+}

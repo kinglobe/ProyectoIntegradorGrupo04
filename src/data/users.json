@@ -6,7 +6,8 @@
       "email": "omarzerpa316@gmail.com",
       "password": "$2a$10$ITSbKT5b8t96EUNxpE9nxOIXPvHZMqZddWy4mTjQkVlul0uqN/ezW",
       "rol": "admin",
-      "birthday": null
+      "birthday": "1991-06-10",
+      "gender": "v"
    },
    {
       "id": "7770d8d2-d981-41c4-8e87-eefcce5dcbe7",
