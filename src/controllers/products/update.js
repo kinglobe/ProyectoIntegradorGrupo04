@@ -19,7 +19,7 @@ module.exports = (req,res) => {
             product.name = name.trim();
             product.brand = brand.trim();
             product.description = description.trim();
-            product.categoryType = categoryType.trim();
+            product.category = categoryType;
             product.price = +price;
             product.discount = +discount;
             product.stock = +stock; 
@@ -32,5 +32,5 @@ module.exports = (req,res) => {
 
     writeJSON(productsModify, 'products.json')
 
-    return res.redirect('/users/admin')
+    return res.redirect('admin')
 }

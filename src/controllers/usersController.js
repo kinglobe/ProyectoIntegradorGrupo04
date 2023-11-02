@@ -1,4 +1,3 @@
-const {readJSON} = require('../data')
 
 
     module.exports = {
@@ -9,11 +8,4 @@ const {readJSON} = require('../data')
         profile : require('./users/profile'),
         updateProfile : require('./users/updateProfile'),
         logout : require('./users/logout'),
-        admin: (req, res) => {
-            const products = readJSON('products.json');
-    
-            return res.render('./users/admin', {
-                products
-            });
-        }
     }

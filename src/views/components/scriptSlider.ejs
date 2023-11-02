@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     new Glide('.glide', {
         type: 'slider',
         startAt: 0,
@@ -18,8 +18,50 @@
                 perView: 1
             }
         }
-    }).mount(),
-        new Glide('#destacados', {
+    }).mount()
+
+</script>
+ -->
+<script>
+    document.querySelectorAll('.glide').forEach(function (element) {
+        new Glide(element, {
+            type: 'slider',
+            startAt: 0,
+            perView: 5,
+            gap: 15,
+            breakpoints: {
+                1024: {
+                    perView: 4
+                },
+                869: {
+                    perView: 3
+                },
+                630: {
+                    perView: 2
+                },
+                430: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    });
+</script>
+<!-- document.querySelectorAll('.glide'): document es un objeto que representa el documento HTML actual. La función querySelectorAll busca todos los elementos en el documento que coincidan con el selector CSS proporcionado, en este caso, elementos con la clase glide.
+
+.forEach(function(element) {  querySelectorAll devuelve una lista de elementos que coinciden con el selector. forEach es un método que se puede utilizar con listas para iterar sobre cada elemento de la lista y ejecutar una función para cada uno. En este caso, para cada elemento que tenga la clase glide, se ejecutará la función proporcionada.
+    ACLARACIÓN en el foreach, se agrego  index que indica el indice de la seccion  y se agrego una clase section< index> apuntando al idice de cada section por ejemplo section0; section1 .....
+
+new Glide(element, {...}).mount();: Esto es donde se inicializa Glide.js. element es el elemento HTML actual que se está procesando (un elemento con la clase glide). Se crea una nueva instancia de Glide utilizando este elemento como el contenedor para el carrousel.
+
+type: 'slider': Define el tipo de carrousel como un deslizador.
+startAt: 0: Define el índice inicial del primer elemento en el carrousel.
+perView: 5: Indica cuántos elementos deben ser visibles a la vez en el carrousel.
+gap: 15: Establece el espacio entre los elementos del carrousel.
+breakpoints: Define cómo debe comportarse el carrousel en diferentes tamaños de pantalla.
+.mount();: Esto es lo que finaliza el proceso de inicialización. Monta el carrousel y lo hace funcional en la página. -->
+
+
+<!--         new Glide('#destacados', {
             type: 'slider',
             startAt: 0,
             perView: 5,
@@ -58,6 +100,4 @@
                     perView: 1
                 }
             }
-        }).mount();
-
-</script>
+        }).mount(); -->

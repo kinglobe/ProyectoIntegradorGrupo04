@@ -26,12 +26,12 @@ module.exports = {
         type: Sequelize.INTEGER.UNSIGNED,
         defaultValue: 0
       },
-      categoriId: {
+      categoryId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        defaultValue: 1,
         refences: {
-          model : {
-            tableName : 'Categoris'
+          model: {
+            tableName: 'Categories'
           }
         }
       },
@@ -39,8 +39,8 @@ module.exports = {
         type: Sequelize.INTEGER,
         defaultValue: 1,
         refences: {
-          model : {
-            tableName : 'Sections'
+          model: {
+            tableName: 'Sections'
           }
         }
       },
@@ -48,8 +48,8 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         refences: {
-          model : {
-            tableName : 'Brands'
+          model: {
+            tableName: 'Brands'
           }
         }
       },

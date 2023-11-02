@@ -13,6 +13,9 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      origin: {
+        type: Sequelize.STRING
+      },
       image: {
         type: Sequelize.STRING
       },

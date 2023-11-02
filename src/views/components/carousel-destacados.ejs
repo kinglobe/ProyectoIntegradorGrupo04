@@ -1,13 +1,20 @@
-<section id="destacados" class="glide">
-    <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides ">
-            
-                <% sale.forEach(product=> { %>
+<section class="section__productosDetail">
+    <section class="glide home__main__section">
+        <div class="home__detalle_section">
+            <h2>Productos Destacados</h2>
+            <a class="section__link-ver-mas" href="#">Ver más</a>
+        </div>
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+
+                <% sections.products.forEach(product => { %>
                     <li class="glide__slide">
-                        <%- include('../partials/products',{ ...product, toThousand }) %>
+                        <%- include('../partials/products', { product, toThousand }) %>
                     </li>
                 <% }) %>
-        </ul>
-    </div>
-    <%- include('buttonSlider') %>
+            </ul>
+        </div>
+        <%- include('buttonSlider') %>
+    </section>
+
 </section>

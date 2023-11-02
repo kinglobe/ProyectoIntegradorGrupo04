@@ -55,71 +55,44 @@
                     </div>
                 </section>
 
-<!-- ---------------------------------------------------------------------------- -->
-                <section id="masVendidos" class=" glide home__main__section">
-                    <div class="home__detalle_section">
-                        <h2>Productos más vendidos</h2>
-                        <a class="section__link-ver-mas" href="#">Ver más</a>
-                    </div>
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides ">
+                <!-- ---------------------------------------------------------------------------- -->
+                <% sections.forEach((section,index)=> { %>
+                <section  class="glide home__main__section section<%= index[0] %>">
+                    
+                        <div class="home__detalle_section">
+                            <h2>
+                                <%= section.name %>
+                            </h2>
+                            <a class="section__link-ver-mas" href="#">Ver más</a>
+                        </div>
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides ">
 
-                            <% visited.forEach(product=> { %>
-                                <li class="glide__slide">
-                                    <%- include('partials/products',{ ...product, toThousand }) %>
-                                </li>
-                            <% }) %>
-                        </ul>
-                    </div>
-                    <%- include('./components/buttonSlider') %>
-                </section>
-
-<!-- ------------------------------------------------------------------------- -->
-                <section id="destacados" class="glide home__main__section">
-                    <div class="home__detalle_section">
-                        <h2>Productos destacados</h2>
-                        <a class="section__link-ver-mas" href="#">Ver más</a>
-                    </div>
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides ">
-                            
-                                <% sale.forEach(product=> { %>
+                                <% section.products.forEach(product=> { %>
                                     <li class="glide__slide">
-                                        <%- include('partials/products',{ ...product, toThousand }) %>
+                                        <%- include('partials/products',{ product, toThousand }) %>
                                     </li>
-                                <% }) %>
-                        </ul>
-                    </div>
-                    <%- include('./components/buttonSlider') %>
-                </section>
-<!-- ------------------------------------------------------------------------------------ -->
-
-                <section id="ofertas" class="glide home__main__section">
-                    <div class="home__detalle_section">
-                        <h2>Ofertas</h2>
-                        <a class="section__link-ver-mas" href="#">Ver más</a>
-                    </div>
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides ">
+                                    <% }) %>
+                            </ul>
+                        </div>
+                        <%- include('components/buttonSlider') %>
+                        
                             
-                                <% more.forEach(product=> { %>
-                                    <li class="glide__slide">
-                                        <%- include('partials/products',{ ...product, toThousand }) %>
-                                    </li>
-                                <% }) %>
-                        </ul>
-                    </div>
-                    <%- include('./components/buttonSlider') %>
                 </section>
+                <% }) %> 
+
+
+                <!-- ------------------------------------------------------------------------- -->
+
 
 
 
             </main>
             <!-- footer -->
             <%- include('./partials/footer') %>
-            <%- include('./components/scriptSlider') %>
-            
-            
+                <%- include('./components/scriptSlider') %>
+
+
     </body>
 
 </html>

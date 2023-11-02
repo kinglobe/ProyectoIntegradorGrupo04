@@ -22,15 +22,39 @@
                                             placeholder="Nombre del producto" name="name" value="<%= locals.old && (old.name && old.name) %>">
                                             <small class="ms-1 text-danger"><%= locals.errors && (errors.name && errors.name.msg) %></small>
                                     </div>
-                                    <div class="col-12 col-md-6 mb-3">
+
+                                    <div class="col-12 col-md-4 mb-3">
+                                        <label for="category" class="form-label">Categoria</label>
+                                        <select class="form-select <%= locals.errors && (errors.category && 'is-invalid') %>" aria-label="Default select example" name="category" id="category">
+                                            <option selected hidden value="">Seleccione...</option>
+                                            <% categories.forEach(category => { %>
+                                                <option value="<%= category.id %>" <%= locals.old && (old.category === category.id && 'selected') %>><%= category.name %> </option>
+                                            <% }) %>
+                                        </select>
+                                        <small class="ms-1 text-danger"><%= locals.errors && (errors.category && errors.category.msg) %></small>
+                                    </div>
+                                    
+
+                                    <div class="col-12 col-md-4 mb-3">
                                         <label for="brand" class="form-label">Marca</label>
-                                        <input type="text" class="form-control" id="brand" name="brand" value="<%= locals.old && (old.brand && old.brand) %>">
+                                        <select class="form-select <%= locals.errors && (errors.brand && 'is-invalid') %>" aria-label="Default select example" name="brand" id="brand">
+                                            <option selected hidden value="">Seleccione...</option>
+                                            <% brands.forEach(brand => { %>
+                                                <option value="<%= brand.id %>" <%= locals.old && (old.brand === brand.id && 'selected') %>><%= brand.name %> </option>
+                                            <% }) %>
+                                        </select>
                                         <small class="ms-1 text-danger"><%= locals.errors && (errors.brand && errors.brand.msg) %></small>
                                     </div>
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <label for="categoryType" class="form-label">Categoria</label>
-                                        <input type="text" class="form-control" id="categoryType" name="categoryType" value="<%= locals.old && (old.categoryType && old.categoryType) %>">
-                                        <small class="ms-1 text-danger"><%= locals.errors && (errors.categoryType && errors.categoryType.msg) %></small>
+
+                                    <div class="col-12 col-md-4 mb-3">
+                                        <label for="section" class="form-label">Sección</label>
+                                        <select class="form-select <%= locals.errors && (errors.section && 'is-invalid') %>" aria-label="Default select example" name="section" id="section">
+                                            <option selected hidden value="">Seleccione...</option>
+                                            <% sections.forEach(section => { %>
+                                                <option value="<%= section.id %>" <%= locals.old && (old.section === section.id && 'selected') %>><%= section.name %> </option>
+                                            <% }) %>
+                                        </select>
+                                        <small class="ms-1 text-danger"><%= locals.errors && (errors.section && errors.section.msg) %></small>
                                     </div>
                                     
                                     <div class="col-12 col-md-6 mb-3">
@@ -45,9 +69,9 @@
 
                                     
                                     <div class="col-12  mb-3">
-                                        <label for="image" class="form-label">Agregar imagen</label>
-                                        <input class="form-control" type="file" id="image" name="image">
-                                        <small class="ms-1 text-danger"><%= locals.errors && (errors.image && errors.image.msg) %></small>
+                                        <label for="images" class="form-label">Agregar imágenes</label>
+                                        <input class="form-control" type="file" id="images" name="images" multiple >
+                                        <small class="ms-1 text-danger"><%= locals.errors && (errors.images && errors.images.msg) %></small>
                                     </div>
                                     <div class="col-12  mb-3">
                                         <label for="description" class="form-label">Descripción</label>
@@ -59,7 +83,7 @@
                                     <div class="col-12 d-flex justify-content-end gap-2 mb-3">
                                         <a href="/users/admin" class="btn btn-success me-auto">Volver</a>
                                         
-                                        <button class="btn btn-success" type="submit">Guardar cambios</button>
+                                        <button class="btn btn-success" type="submit">Guardar nuevo producto</button>
                                         
                                     </div>
 
