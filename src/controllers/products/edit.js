@@ -3,7 +3,7 @@ const db = require('../../database/models')
 module.exports = (req,res) => {
 
     const product = db.Product.findByPk(req.params.id, {
-        include: ['images']
+        include: ['category', 'brand', 'section','images']
     })
 
     const categories = db.Category.findAll({
@@ -20,11 +20,17 @@ module.exports = (req,res) => {
 
     Promise.all([product, categories, brands, sections])
         .then(([product, categories, brands, sections]) => {
+
+            console.log(product); // Añade este log para verificar el contenido de 'product'
+            console.log(categories, brands, sections); // Añade este log para verificar las categorías, marcas y secciones
+
+
             return res.render('products/productEdit',{
                 ...product.dataValues,
                 categories,
                 brands,
-                sections
+                sections,
+                old: req.body
             })
         })
         .catch(error => console.log(error))

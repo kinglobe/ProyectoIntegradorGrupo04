@@ -1,3 +1,6 @@
+
+
+
 const { unlinkSync, existsSync } = require('fs');
 const db = require('../../database/models')
 
@@ -5,10 +8,29 @@ module.exports = (req, res) => {
 
 
     const id = req.params.id;
-    const { name, brand, description, category, section, price, discount, stock } = req.body;
+    const { name, brandId, description, categoryId, sectionId, price, discount, stock } = req.body;
+
+    
+  
+    const categories = db.Category.findAll({
+        order: ['name']
+    })
+    
+    const brands = db.Brand.findAll({
+        order : ['name']
+    });
+
+    const sections = db.Section.findAll({
+        order: ['name']
+    })
+
+
+
+
+
 
     db.Product.findByPk(id, {
-        include: ['images']
+        include: [ 'images']
     })
         .then(product => {
 
@@ -20,9 +42,9 @@ module.exports = (req, res) => {
                     name: name.trim(),
                     price,
                     discount,
-                    categoryId: category,
-                    brandId: brand,
-                    sectionId: section,
+                    categoryId,
+                    brandId,
+                    sectionId,
                     description: description.trim(),
                     image: req.files.image ? req.files.image[0].filename : product.image,
 
@@ -68,4 +90,4 @@ module.exports = (req, res) => {
             })
         }).catch(error => console.log(error))
 
-}
+} 

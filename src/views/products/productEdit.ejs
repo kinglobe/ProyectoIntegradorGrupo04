@@ -32,20 +32,21 @@
                                             </div>
                                             
                                             <div class="col-12 col-md-4 mb-3">
-                                                <label for="category" class="form-label">Categoria</label>
+                                                <label for="categoryId" class="form-label">Categoria</label>
                                                 <select class="form-select <%= locals.errors && (errors.category && 'is-invalid') %>" aria-label="Default select example" name="category" id="category">
-                                                    <option selected hidden value="">Seleccione...</option>
+                                                    <option selected hidden value="<%= category.id %>"><%= category.name %></option>
                                                     <% categories.forEach(category => { %>
-                                                        <option value="<%= category.id %>" <%= locals.old && (old.category === category.id && 'selected') %>><%= category.name %> </option>
+                                                        <option value="<%= category %>" <%= locals.old && (old.category === category.id && 'selected') %>><%= category.name %> </option>
+                                                        
                                                     <% }) %>
                                                 </select>
                                                 <small class="ms-1 text-danger"><%= locals.errors && (errors.category && errors.category.msg) %></small>
                                             </div>
 
                                             <div class="col-12 col-md-4 mb-3">
-                                                <label for="brand" class="form-label">Marca</label>
+                                                <label for="brandId" class="form-label">Marca</label>
                                                 <select class="form-select <%= locals.errors && (errors.brand && 'is-invalid') %>" aria-label="Default select example" name="brand" id="brand">
-                                                    <option selected hidden value="">Seleccione...</option>
+                                                    <option selected hidden value="<%= brand%>"><%= brand.name %></option>
                                                     <% brands.forEach(brand => { %>
                                                         <option value="<%= brand.id %>" <%= locals.old && (old.brand === brand.id && 'selected') %>><%= brand.name %> </option>
                                                     <% }) %>
@@ -55,11 +56,11 @@
                                             
 
                                             <div class="col-12 col-md-4 mb-3">
-                                                <label for="section" class="form-label">Sección</label>
+                                                <label for="sectionId" class="form-label">Sección</label>
                                                 <select class="form-select <%= locals.errors && (errors.section && 'is-invalid') %>" aria-label="Default select example" name="section" id="section">
-                                                    <option selected hidden value="">Seleccione...</option>
+                                                    <option selected hidden value="<%= section %>"><%= section.name %></option>
                                                     <% sections.forEach(section => { %>
-                                                        <option value="<%= section.id %>" <%= locals.old && (old.section === section.id && 'selected') %>><%= section.name %> </option>
+                                                        <option value="<%= section%>" <%= locals.old && (old.section === section.id && 'selected') %>><%= section.name %> </option>
                                                     <% }) %>
                                                 </select>
                                                 <small class="ms-1 text-danger"><%= locals.errors && (errors.section && errors.section.msg) %></small>
