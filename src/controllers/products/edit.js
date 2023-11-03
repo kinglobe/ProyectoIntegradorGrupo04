@@ -21,8 +21,8 @@ module.exports = (req,res) => {
     Promise.all([product, categories, brands, sections])
         .then(([product, categories, brands, sections]) => {
 
-            console.log(product); // Añade este log para verificar el contenido de 'product'
-            console.log(categories, brands, sections); // Añade este log para verificar las categorías, marcas y secciones
+            console.log(product); 
+            console.log(categories, brands, sections); 
 
 
             return res.render('products/productEdit',{
