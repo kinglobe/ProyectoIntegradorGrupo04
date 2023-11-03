@@ -8,38 +8,61 @@
 
             <main class="container">
                 <div class="row mt-5 mb-5">
-                    <div class="col-12 col-md-8  mx-auto">
+                    <div class="col-12 col-md-11  mx-auto">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Editar producto</h4>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/admin">Productos</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Editando: <%= name %></li>
+                                    </ol>
+                                </nav>
                             </div>
                             <div class="card-body">
                                 <form action="/products/update/<%= id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
-                                    <div class="col-12 col-md-4">
-                                        <img src="/images/products/<%= image %>" alt="" class="img-fluid">
+                                    <div class="col-12 col-md-4 my-auto">
+                                        <img src="/images/products/<%= image%>" alt="" class="img-fluid mx-auto d-block">
                                     </div>
                                     <div class="col-12 col-md-8">
                                         <div class="row">
-                                            <div class="col-12 col-md-6 mb-3">
+                                            <div class="col-12 col-md-12 mb-3">
                                                 <label for="formGroupExampleInput" class="form-label">Nombre</label>
                                                 <input type="text" class="form-control" id="formGroupExampleInput"
                                                     placeholder="Nombre del producto" name="name" value="<%= name %>">
                                             </div>
-                                            <div class="col-12 col-md-6 mb-3">
-                                                <label for="brand" class="form-label">Marca</label>
-                                                <input type="text" class="form-control" id="brand" name="brand"
-                                                    value="<%= brand %>">
-                                            </div>
-                                            <div class="col-12 col-md-6 mt-4">
+                                            
+                                            <div class="col-12 col-md-4 mb-3">
                                                 <label for="category" class="form-label">Categoria</label>
-                                                <select name="category" id="category" class="form-input">
-                                                    <option value=""select hidden>Elegí</option>
-                                                    <option value="yerba">Yerba Mate</option>
-                                                    <option value="vino">Vinos</option>
-                                                    <option value="alfajor">Alfajores</option>
+                                                <select class="form-select <%= locals.errors && (errors.category && 'is-invalid') %>" aria-label="Default select example" name="category" id="category">
+                                                    <option selected hidden value="">Seleccione...</option>
+                                                    <% categories.forEach(category => { %>
+                                                        <option value="<%= category.id %>" <%= locals.old && (old.category === category.id && 'selected') %>><%= category.name %> </option>
+                                                    <% }) %>
                                                 </select>
-                                                <!-- <input type="text" class="form-control" id="category" name="category" value="<%= locals.old && (old.category && old.category) %>">
-                                                <small class="ms-1 text-danger"><%= locals.errors && (errors.category && errors.category.msg) %></small> -->
+                                                <small class="ms-1 text-danger"><%= locals.errors && (errors.category && errors.category.msg) %></small>
+                                            </div>
+
+                                            <div class="col-12 col-md-4 mb-3">
+                                                <label for="brand" class="form-label">Marca</label>
+                                                <select class="form-select <%= locals.errors && (errors.brand && 'is-invalid') %>" aria-label="Default select example" name="brand" id="brand">
+                                                    <option selected hidden value="">Seleccione...</option>
+                                                    <% brands.forEach(brand => { %>
+                                                        <option value="<%= brand.id %>" <%= locals.old && (old.brand === brand.id && 'selected') %>><%= brand.name %> </option>
+                                                    <% }) %>
+                                                </select>
+                                                <small class="ms-1 text-danger"><%= locals.errors && (errors.brand && errors.brand.msg) %></small>
+                                            </div>
+                                            
+
+                                            <div class="col-12 col-md-4 mb-3">
+                                                <label for="section" class="form-label">Sección</label>
+                                                <select class="form-select <%= locals.errors && (errors.section && 'is-invalid') %>" aria-label="Default select example" name="section" id="section">
+                                                    <option selected hidden value="">Seleccione...</option>
+                                                    <% sections.forEach(section => { %>
+                                                        <option value="<%= section.id %>" <%= locals.old && (old.section === section.id && 'selected') %>><%= section.name %> </option>
+                                                    <% }) %>
+                                                </select>
+                                                <small class="ms-1 text-danger"><%= locals.errors && (errors.section && errors.section.msg) %></small>
                                             </div>
 
                                             <div class="col-12 col-md-6 mb-3">
@@ -62,9 +85,11 @@
                                         </div>
 
                                         <div class="col-12 d-flex justify-content-end gap-2 mb-3">
-                                            <a href="/users/admin" class="btn btn-success me-auto">Volver</a>
-                                            <label for="image" class="btn btn-secondary">Cambiar imagen</label>
+                                            <a href="/admin" class="btn btn-success me-auto">Volver</a>
+                                            <label for="image" class="btn btn-secondary">Cambiar imagen Principal</label>
                                             <input hidden class="form-control" type="file" id="image" name="image">
+                                            <label for="images" class="btn btn-secondary">Cambiar imágenes</label>
+                                            <input hidden class="form-control" type="file" id="images" name="images">
                                             <button class="btn btn-success" type="submit">Guardar cambios</button>
                                         </div>
                                     </div>

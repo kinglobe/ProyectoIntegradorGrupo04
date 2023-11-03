@@ -11,9 +11,23 @@ const productAddValidatior = require('../validations/productAddValidatior');
 router.get('/detalleProducto/:id', detail);
 router.get('/carrito', carrito);
 router.get('/productAdd', add);
-router.post('/productAdd',upload.array('images'),productAddValidatior, create)
+router.post('/productAdd',upload.fields([
+    {
+        name: "image",
+    },
+    {
+        name: "images",
+    }
+]),productAddValidatior, create)
 router.get('/productEdit/:id', edit);
-router.put('/update/:id', upload.single('image'),update);
+router.put('/update/:id', upload.fields([
+    {
+        name: "image",
+    },
+    {
+        name: "images",
+    }
+]),update);
 router.delete('/remove/:id', remove);
 router.get('/filter',filter)
 

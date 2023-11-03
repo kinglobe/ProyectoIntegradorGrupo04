@@ -69,6 +69,11 @@
 
                                     
                                     <div class="col-12  mb-3">
+                                        <label for="image" class="form-label">Imagen principal</label>
+                                        <input class="form-control" type="file" id="image" name="image">
+                                        <small class="ms-1 text-danger"><%= locals.errors && (errors.images && errors.images.msg) %></small>
+                                    </div>
+                                    <div class="col-12  mb-3">
                                         <label for="images" class="form-label">Agregar imágenes</label>
                                         <input class="form-control" type="file" id="images" name="images" multiple >
                                         <small class="ms-1 text-danger"><%= locals.errors && (errors.images && errors.images.msg) %></small>
@@ -81,7 +86,7 @@
                                     </div>
                                     
                                     <div class="col-12 d-flex justify-content-end gap-2 mb-3">
-                                        <a href="/users/admin" class="btn btn-success me-auto">Volver</a>
+                                        <a href="/admin" class="btn btn-success me-auto">Volver</a>
                                         
                                         <button class="btn btn-success" type="submit">Guardar nuevo producto</button>
                                         

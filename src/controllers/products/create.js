@@ -11,7 +11,7 @@ module.exports = (req, res) => {
 
     if (errors.isEmpty()) {
 
-        const {name, price, discount, description, category, brand, section} = req.body
+        const {name, price, discount, description, category, brand, section, image} = req.body
 
         db.Product.create({
             name: name.trim(),
@@ -20,22 +20,30 @@ module.exports = (req, res) => {
             description: description.trim(),
             categoryId: category,
             brandId: brand,
-            sectionId: section
+            sectionId: section,
+            image: req.files.image ? req.files.image[0].filename : null,  
+
+            
+    
         })
             .then(product => {
-                if (req.files.length) {
-                    const images = req.files.map((file, index) => {
+                if (req.files.images) {
+                    const images = req.files.images.map((file) => {
                         return {
                             file : file.filename,
-                            main : index === 0 ? true : false,
+                            main : false,
                             productId : product.id,
                         }
                     })
                     db.Image.bulkCreate(images, {
                         validate : true
-                    }).then(response => console.log(response))
+                    }).then(response => {
+                        return res.redirect('/admin');
+                    })
+                }else {
+                    return res.redirect('/admin');
                 }
-                return res.redirect('/admin');
+                
             })
                 .catch(error => console.log(error))
     

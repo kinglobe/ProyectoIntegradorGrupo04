@@ -31,7 +31,10 @@ module.exports = {
 /* -------------------------------------------------------------- */
 
 	admin : (req,res) => { 
-
+		const sections = db.Section.findAll({
+			order: ['name']
+		})
+	
         
         const products = db.Product.findAll({
 			include: ['category', 'brand', 'section', 'images']
