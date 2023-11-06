@@ -425,7 +425,8 @@
         margin-bottom: 5em;
     }
     .home_producto {
-        max-width: 245px;
+        max-width: 210px;
+        
         min-height: 405px;
         max-height:  410px;
         
@@ -454,6 +455,8 @@
     
     }
     
+   
+
     .home_info {
         border-top: 1px solid rgb(230, 230, 230);
         padding: 1em;
@@ -503,5 +506,5 @@
 
 
 .home__main {
-    max-width: 1024px;
+    max-width: 1124px;
 } 

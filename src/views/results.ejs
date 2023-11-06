@@ -16,7 +16,7 @@
 				<% results.forEach(product => { %>
 					<div class="home__main__section__contenedor-articulos mb-4">
 						<%-include('partials/products',{
-							...product,
+							product,
 							toThousand
 						})%>
 					</div>
