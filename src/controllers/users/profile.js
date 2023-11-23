@@ -1,16 +1,15 @@
 const db = require("../../database/models");
 
     module.exports = (req,res) => {
-    
         db.User.findByPk(req.session.userLogin.id)
         .then(user => {
-            const birthday = new Date(user.birthday).toISOString();
-            console.log(birthday)
+            const birthday = user.birthday ? new Date(user.birthday).toISOString() : null;
             return res.render('profile', {
                 ...user.dataValues,
-                birthday : birthday.split('T')[0]
+                birthday : birthday ? birthday.split('T')[0] : null
             })
-            })
-            .catch(error => console.log(error))
+        })
+        .catch(error => console.log(error))
+
     
 }

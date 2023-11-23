@@ -15,14 +15,14 @@
                     <div>
                         <label class="form-label" for="name">Nombre</label>
                         <input class="form-control" type="text" id="name" name="name" value="<%= name %>">
-                        <small class="ms-1 text-danger">
+                        <small class="ms-1 text-danger" id="msgError-name">
                             <%= locals.errors && (errors.surname && errors.surname.msg) %>
                         </small>
                     </div>
                     <div>
-                        <label class="form-label" for="name">Apellido</label>
+                        <label class="form-label" for="surname">Apellido</label>
                         <input class="form-control" type="text" id="surname" name="surname" value="<%= surname %>">
-                        <small class="ms-1 text-danger">
+                        <small class="ms-1 text-danger" id="msgError-surname">
                             <%= locals.errors && (errors.surname && errors.surname.msg) %>
                         </small>
                     </div>
@@ -31,6 +31,9 @@
                             <label class="form-label" for="birthday">Cumpleaños</label>
                             <input class="form-control" type="date" id="birthday" name="birthday"
                                 value="<%= birthday %>">
+                            <small class="ms-2 text-danger" id="msgError-birthday">
+                                <%= locals.errors && (errors.birthday && errors.birthday.msg) %>
+                                </small>
                         </div>
                         <div class="col-6 col-md-6 mb-2">
                             <label class="form-label" for="gender">Género</label>
@@ -85,6 +88,9 @@
             </section>
 
             <%- include('partials/footer') %>
+
+                <script src="/javascripts/moment.js"></script>
+                <script src="/javascripts/profile.js"></script>
     </body>
 
 </html>
