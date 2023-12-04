@@ -24,7 +24,7 @@
                             <input class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>"
                                 type="email" name="email" id="email" placeholder="Ingrese su email" name="email">
 
-                            <small class="text-danger ms-2">
+                            <small id="msgError-email" class="text-danger ms-2">
                                 <%= locals.errors && (errors.email && errors.email.msg); %>
                             </small>
                         </div>
@@ -32,11 +32,11 @@
                         <div class="login__main--pass">
                             <input class="form-control" type="password" name="password" id="password"
                                 placeholder="Ingrese su contraseña" name="password">
-
-                            <a class="text-white small" href="">Olvidé mi contraseña</a>
+                            
                         </div>
+                        <a class="text-white small" href="">Olvidé mi contraseña</a>
                         <div>
-                            <small class="text-danger ms-2">
+                            <small id="msgError-password" class="text-danger ms-2">
                                 <%= locals.errors && (errors.password && errors.password.msg); %>
                             </small>
                         </div>
@@ -78,6 +78,8 @@
             </main>
 
             <%- include('partials/footer') %>
+
+            <script src="/javascripts/validationLogin.js"></script>
 
     </body>
 
