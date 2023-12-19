@@ -47,18 +47,26 @@
                     </div>
                     <div class="col-12 mb-3">
                         <label for="address">Domicilio</label>
-                        <input type="text" class="form-control" name="address">
+                        <input value="<%= address.address %>" type="text" class="form-control" name="address">
                     </div>
                     <div class="col-12 mb-3">
                         <label for="province">Provincia</label>
                         <select id="province" class="form-control" name="province">
+                            <% if (address.province) { %>
+                                <option selected value="<%= address.province %>"><%= address.province %></option>
+                            <% }else{ %>
                             <option selected hidden>Elija la provincia...</option>
+                            <% } %>
                         </select>
                     </div>
                     <div class="col-12 mb-3">
                         <label for="city">Localidad</label>
-                        <select id="city" class="form-control" name="city">
-                            <option selected hidden>Elija la provincia...</option>
+                        <select id="city" class="form-control" name="city" disabled>
+                            <% if (address.city) { %>
+                                <option selected value="<%= address.city %>"><%= address.city %></option>
+                            <% }else{ %>
+                            <option selected hidden>Elija la localidad...</option>
+                            <% } %>
                         </select>
                     </div>
                     </div>

@@ -14,7 +14,8 @@ module.exports = (req, res) => {
                 surname: surname.trim(),
                 birthday : birthday || null,
                 gender,
-                about: about.trim()
+                about: about.trim(),
+              
             },
             {
                 where: {
@@ -23,8 +24,22 @@ module.exports = (req, res) => {
             }
         )
             .then(response => {
-                console.log(response);
-                return res.redirect('/')
+                db.Address.update(
+                    {
+                       address:address.trim(),
+                       city,
+                       province 
+                    },
+                    {
+                        where: {
+                            userId: req.session.userLogin.id
+                        }
+                    }
+                    )
+                    .then(response => {
+                        return res.redirect('/')
+                    })
+                
             })
             .catch(error => console.log(error))
 

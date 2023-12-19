@@ -61,8 +61,10 @@
                             </li>
                             <li><a href="/users/favorites">Mis favoritos <i class="fas fa-thumbs-up fa-lg"></i></a></li>
                         <% } %>
-                        <div class="carrito">
-                            <a href="/products/carrito">Mis compras <i class="fa-solid fa-cart-shopping"></i> </a>
+                            <div class="carrito">
+                                <button id="btn-cart" type="button" class="btn btn-transparent text-white position-relative me-3" data-bs-toggle="modal" data-bs-target="#modalCart">
+                                    <i class="fa-solid fa-cart-shopping fa-xl"></i></button>
+                            </div>
                         </div>
                     </ul>
                 </nav>
@@ -89,3 +91,22 @@
 
     </div>
 </header>
+
+ <!-- Modal -->
+ <div class="modal fade" id="modalCart" tabindex="-1" aria-labelledby="modalCartLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalCartLabel">Mi carrito</h1>
+        </div>
+        <div class="modal-body" id="cart-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger disabled" onclick="emptyCart()" id="btn-empty-cart">Vaciar carrito</button>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Seguir comprando</button>
+          <button type="button" class="btn btn-primary">Finalizar compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
