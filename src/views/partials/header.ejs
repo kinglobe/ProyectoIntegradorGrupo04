@@ -6,13 +6,18 @@
             </div>
 
             <div class="col-6 col-md-6 form-search mt-4">
-                <form action="/search" method="GET" class="search-form">
-                    <input type="text" name="keywords" placeholder="Buscar..." class="search-form_input">
+                <small id="msgError-keywords" class="ms-2 text-warning"></small>
+                <small id="msgError-empty" class="ms-2 text-warning"></small>
+                <form action="/search" method="GET" class="search-form" id="form-Keywords">
+                    <input type="text" name="keywords" id="keywords" placeholder="Buscar..." class="search-form_input">
                     <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+                    
                 </form>
+                
+
                 <nav class="main_header-navCentro mt-1">
                     <ul class="left-navbar">
-                        <li><a href="/products">Productos</a></li>
+                        <li><a href="/">Productos</a></li>
                         <li><a href="">Contacto</a></li>
                         <li><a href="">Ofertas</a></li>
                         <li><a href="">Ayuda</a></li>
@@ -27,13 +32,15 @@
                             <li><a href="/users/register">Creá tu cuenta</a></li>
                             <li><a href="/users/login">Ingresá</a></li>
                         <% } else { %>
-                            <!-- <% if (userLogin.rol==="admin" ) { %>
+                            <% if (userLogin.rol==="admin" ) { %>
                                 <li><a href="/admin">admin</a></li>
-                            <% } %> -->
+                            <% } %> 
                             <li>
+                                
                                 <select class="user-dropdown" onchange="changeAction(this)">
+                                    
                                     <option  value="" disabled selected>
-
+                                        
                                         <%= userLogin.name %>
                                     </option>
                                     <option value="/users/profile">
@@ -52,6 +59,7 @@
                                     </option>
                                 </select>
                             </li>
+                            <li><a href="/users/favorites">Mis favoritos <i class="fas fa-thumbs-up fa-lg"></i></a></li>
                         <% } %>
                         <div class="carrito">
                             <a href="/products/carrito">Mis compras <i class="fa-solid fa-cart-shopping"></i> </a>
@@ -70,6 +78,8 @@
             </script>
             
         </div>
+
+        <script src="/javascripts/search.js"></script>
 
         <!-- <button class="btn-toggle-navbar">
             <i class="fas fa-bars"></i>

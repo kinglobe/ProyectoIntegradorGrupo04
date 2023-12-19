@@ -8,4 +8,6 @@
         profile : require('./users/profile'),
         updateProfile : require('./users/updateProfile'),
         logout : require('./users/logout'),
+        favorites: require('./users/favorites')
+
     }

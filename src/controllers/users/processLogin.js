@@ -10,13 +10,15 @@ module.exports = (req, res) => {
     db.User.findOne({
       where: {
         email
-      }
+      },
+      include : ['favorites']
     })
       .then(user => {
         req.session.userLogin = {
           id : user.id,
           name: user.name,
-          rol: user.roleId
+          rol: user.roleId,
+          favorites : user.favorites
         }
         // tiempo de login 
         remember !== undefined && res.cookie('aLmAcEn', req.session.userLogin, {//
