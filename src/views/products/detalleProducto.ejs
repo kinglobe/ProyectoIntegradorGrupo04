@@ -6,7 +6,11 @@
   <body>
     <%- include('../partials/header') %>  
     <main class="main__detalleProducto">
+      <% if (locals.userLogin) { %>
+      <span class="favorite" class="text-primary"><i class="fa-regular fa-heart"></i></span>
+      <% } %>
       <div class="container my-5  products-wrapper">
+        
         <div class="product-detail">
           <div class="row">
             <div class="col-12 col-md-7 col-lg-6 my-auto">
@@ -48,8 +52,13 @@
                 </div>
                 
                 <div class="col-12 d-flex flex-column gap-3">
+<<<<<<< HEAD
+                  <button  type="button" class=" btn-compra btn ">COMPRAR AHORA</button>
+                  <button type="button" class="btn-agregarCarrito btn btn-light buy-now-button">AGREGAR AL CARRITO</button>
+=======
                   <button  type="button" onclick="addItemToCart(1,'<%=product.id%>')" class="btn btn-primary">COMPRAR AHORA</button>
                   <button type="button"  class="btn btn-light buy-now-button">AGREGAR AL CARRITO</button>
+>>>>>>> 97a36a2f33b3f6b8df8fb26cbe691c5699c08216
                 </div>
                 
                 

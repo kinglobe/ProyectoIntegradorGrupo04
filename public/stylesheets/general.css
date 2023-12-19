@@ -2,6 +2,7 @@
     --colorVerde: #0D643D;
     --colorVerdeMusgo: #3D693D;
     --colorVerdeOliva: #518352;
+    --colorVerdeOlivaClaro: #b5c0b5;
     --colorNaranjaGris: #eeeadf;
     --colorNaranja: #f5c998;
     --colorNarajaL: #edc28d;
@@ -20,9 +21,17 @@ a {
     text-decoration: none;
 }
 
-body {
+/* body {
     background-color: var(--colorNaranjaGris);
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
+} */
+@media (min-width:768px) {
+    body {
+        background-color: var(--colorNaranjaGris);
+        min-height: 100vh;
+        grid-template-rows: auto 1fr auto;
+    }
+
 }

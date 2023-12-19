@@ -6,6 +6,16 @@ const product = require('../../database/models/product');
 module.exports = (req, res) => {
 
   const errors = validationResult(req);
+<<<<<<< HEAD
+  const { email, remember } = req.body
+  if (errors.isEmpty()) {
+    db.User.findOne({
+      where: {
+        email
+      },
+      include : ['favorites']
+    })
+=======
 
     if(errors.isEmpty()){
         const {email, remember} = req.body
@@ -15,11 +25,13 @@ module.exports = (req, res) => {
                 email
             }
         })
+>>>>>>> 97a36a2f33b3f6b8df8fb26cbe691c5699c08216
       .then(user => {
         req.session.userLogin = {
           id : user.id,
           name: user.name,
-          rol: user.roleId
+          rol: user.roleId,
+          favorites : user.favorites
         }
         // tiempo de login 
         remember !== undefined && res.cookie('aLmAcEn', req.session.userLogin, {//
