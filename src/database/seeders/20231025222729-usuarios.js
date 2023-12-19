@@ -12,6 +12,8 @@ module.exports = {
         email : 'admin@gmail.com',
         password : "$2a$10$rp6kJ76QSkFRDR7OhE6Gse.HTXWTD9q2lbnuv//Ag6TbG//MjJ1Mi",
         image : null,
+        
+
         roleId : 1,
         createdAt : new Date,
         updatedAt : new Date

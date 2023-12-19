@@ -66,186 +66,184 @@ const showMessageInfo = (message) => {
   });
 }
 
+
 const addItemToCart = async (quantity, product) => {
-    try {
+  try {
+    const response = await fetch("/cart", {
+      method: "POST",
+      body: JSON.stringify({
+        quantity,
+        product: +product,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-      const response = await fetch('/cart', {
-        method: 'POST',
-        body: JSON.stringify({
-          quantity,
-          product: +product,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+    const {
+      ok,
+      cart: { products, total },
+      message,
+    } = await response.json();
 
-      const {
-        ok,
-        cart: { products, total },
-        message,
-      } = await response.json();
-  
-      if (!ok) {
-        throw new Error(message)
-      }
-      showProductInCart(products, total);
+    if (!ok) {
+      throw new Error(message);
+    }
+
+    showProductInCart(products, total);
     showCountCart(products);
     showMessageInfo(message)
 
-      
-      
-    } catch (error) {
+  } catch (error) {
     Swal.fire({
-      title : "Upss",
+      title: "Upss",
       text: error.message,
-      icon: "error"
+      icon: "error",
     });
-    }
-   
-    };
+  }
+};
 
-    const removeItemToCart = async (id) => {
-      try {
-        const response = await fetch(`/cart?product=${id}`, {
-          method: "DELETE",
-        });
-    
-        const {
-          ok,
-          cart: { products, total },
-          message,
-        } = await response.json();
-    
-        if (!ok) {
-          throw new Error(message);
-        }
-    
-        showProductInCart(products, total);
-        showCountCart(products);
-        showMessageInfo(message)
-    
-      } catch (error) {
-        Swal.fire({
-          title: "Upss",
-          text: error.message,
-          icon: "error",
-        });
-      }
-    };
-    
-    const removeAllItem = async (id) => {
-      try {
-        const response = await fetch(`/cart/item-all?product=${id}`, {
-          method: "DELETE",
-        });
-        const {
-          ok,
-          cart: { products, total },
-          message,
-        } = await response.json();
-    
-        if (!ok) {
-          throw new Error(message);
-        }
-    
-        showProductInCart(products, total);
-        showCountCart(products);
-        showMessageInfo(message)
-    
-      } catch (error) {
-        Swal.fire({
-          title: "Upss",
-          text: error.message,
-          icon: "error",
-        });
-      }
-    };
-    
-    const emptyCart = async () => {
-      try {
-        const response = await fetch('/cart/all', {
-          method : 'delete'
-        })
-    
-        const {
-          ok,
-          cart: { products, total },
-          message,
-        } = await response.json();
-    
-        if (!ok) {
-          throw new Error(message);
-        }
-    
-        showProductInCart(products, total);
-        showCountCart(products);
-        showMessageInfo(message);
-    
-    
-      } catch (error) {
-        Swal.fire({
-          title: "Upss",
-          text: error.message,
-          icon: "error",
-        });
-      }
+const removeItemToCart = async (id) => {
+  try {
+    const response = await fetch(`/cart?product=${id}`, {
+      method: "DELETE",
+    });
+
+    const {
+      ok,
+      cart: { products, total },
+      message,
+    } = await response.json();
+
+    if (!ok) {
+      throw new Error(message);
     }
-    
-    window.onload = function () {
-      
-      sessionStorage.setItem("countCart", sessionStorage.getItem("countCart") || 0);
-      $("show-count-cart").innerHTML = sessionStorage.getItem("countCart");
-      $("show-count-cart").hidden = false;
-    
-      $("btn-cart") &&
-        $("btn-cart").addEventListener("click", async function (e) {
-          try {
-            const response = await fetch("/cart");
-            const { ok, cart, message } = await response.json();
-    
-            if (ok) {
-              if (cart.products.length) {
-                $("cart-body").innerHTML = `
+
+    showProductInCart(products, total);
+    showCountCart(products);
+    showMessageInfo(message)
+
+  } catch (error) {
+    Swal.fire({
+      title: "Upss",
+      text: error.message,
+      icon: "error",
+    });
+  }
+};
+
+const removeAllItem = async (id) => {
+  try {
+    const response = await fetch(`/cart/item-all?product=${id}`, {
+      method: "DELETE",
+    });
+    const {
+      ok,
+      cart: { products, total },
+      message,
+    } = await response.json();
+
+    if (!ok) {
+      throw new Error(message);
+    }
+
+    showProductInCart(products, total);
+    showCountCart(products);
+    showMessageInfo(message)
+
+  } catch (error) {
+    Swal.fire({
+      title: "Upss",
+      text: error.message,
+      icon: "error",
+    });
+  }
+};
+
+const emptyCart = async () => {
+  try {
+    const response = await fetch('/cart/all', {
+      method : 'delete'
+    })
+
+    const {
+      ok,
+      cart: { products, total },
+      message,
+    } = await response.json();
+
+    if (!ok) {
+      throw new Error(message);
+    }
+
+    showProductInCart(products, total);
+    showCountCart(products);
+    showMessageInfo(message);
+
+
+  } catch (error) {
+    Swal.fire({
+      title: "Upss",
+      text: error.message,
+      icon: "error",
+    });
+  }
+}
+
+window.onload = function () {
+  
+  sessionStorage.setItem("countCart", sessionStorage.getItem("countCart") || 0);
+  $("show-count-cart").innerHTML = sessionStorage.getItem("countCart");
+  $("show-count-cart").hidden = false;
+
+  $("btn-cart") &&
+    $("btn-cart").addEventListener("click", async function (e) {
+      try {
+        const response = await fetch("/cart");
+        const { ok, cart, message } = await response.json();
+
+        if (ok) {
+          if (cart.products.length) {
+            $("cart-body").innerHTML = `
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-table">
                 
-                <table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">Imagen</th>
-                        <th scope="col">Producto</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody id="cart-table">
-                    
-                    </tbody>
-                      <caption>
-                      <div class="d-flex justify-content-end">
-                      $ <span id="showTotal"></span> 
-                      </div>
-                      </caption>
-                </table>
-                `;
-    
-                showProductInCart(cart.products, cart.total);
-              } else {
-                $("cart-body").innerHTML = `
-                        <div class="alert alert-warning" role="alert">
-                            No hay productos en el carrito.
-                        </div>
-                      `;
-              }
-            } else {
-              throw new Error(message);
-            }
-          } catch (error) {
-            console.log(error);
-            Swal.fire({
-              title: "Upss",
-              text: error.message,
-              icon: "error",
-            });
+                </tbody>
+                  <caption>
+                  <div class="d-flex justify-content-end">
+                  $ <span id="showTotal"></span> 
+                  </div>
+                  </caption>
+            </table>
+            `;
+
+            showProductInCart(cart.products, cart.total);
+          } else {
+            $("cart-body").innerHTML = `
+                    <div class="alert alert-warning" role="alert">
+                        No hay productos en el carrito.
+                    </div>
+                  `;
           }
+        } else {
+          throw new Error(message);
+        }
+      } catch (error) {
+        console.log(error);
+        Swal.fire({
+          title: "Upss",
+          text: error.message,
+          icon: "error",
         });
-    };
+      }
+    });
+};

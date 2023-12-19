@@ -1,10 +1,11 @@
 const db = require('../database/models');
-/* const product = require('../database/models/product'); */
+
 module.exports = {
-    showAll: async (req, res) => {
+
+    showAll : async (req,res) => {
         try {
 
-            if (!req.session.cart) {
+            if(!req.session.cart) {
                 let error = new Error()
                 error.message = 'Debes loguearte';
                 error.status = 404;
@@ -12,59 +13,58 @@ module.exports = {
             }
 
             return res.status(200).json({
-                ok: true,
-                cart: req.session.cart,
-                message: "ok"
+                ok : true,
+                cart : req.session.cart,
+                message : "ok"
             })
 
         } catch (error) {
-            return res.status(error.status || 500).json({
-                ok: false,
-                cart: null,
-                message: error.message || 'Upss, hubo un error'
+              return res.status(error.status || 500).json({
+                ok : false,
+                cart : null,
+                message : error.message || 'Upss, hubo un error'
             })
         }
-
+     
     },
-
-    addItem: async (req, res) => {
+    addItem : async (req,res) => {
         try {
-            if (!req.session.cart) {
+
+            if(!req.session.cart) {
                 let error = new Error()
                 error.message = 'Debes loguearte';
                 error.status = 404;
                 throw error
             }
 
-            console.log(req.body)
+            const {quantity, product: id} = req.body;
 
-            const { quantity, product: id } = req.body;
+            const {name, image, price, discount} = await db.Product.findByPk(id);
 
-            const { name, image, price, discount } = await db.Product.findByPk(id);
-
-            if (req.session.cart.products.map(product => product.id).includes(id)) {
+            if(req.session.cart.products.map(product => product.id).includes(id)){
 
                 req.session.cart.products = req.session.cart.products.map(product => {
-                    if (product.id === id) {
+                    if(product.id === +id){
                         ++product.quantity
                     }
                     return product
                 });
 
-                /* base de datos */
+                 /* base de datos */
                 await db.Item.update(
                     {
-                        quantity: req.session.cart.products.find(product => product.id === +id).quantity
+                        quantity :  req.session.cart.products.find(product => product.id === +id).quantity
                     },
                     {
-                        where: {
-                            orderId: req.session.cart.orderId,
-                            productId: id
+                        where : {
+                            orderId : req.session.cart.orderId,
+                            productId : id
                         }
                     }
                 )
 
-            } else {
+
+            }else{
 
                 req.session.cart.products.push({
                     id,
@@ -73,170 +73,164 @@ module.exports = {
                     price,
                     discount,
                     quantity,
-
                 });
-
+                
                 /* base de datos */
 
                 await db.Item.create({
-                    quantity: 1,
-                    orderId: req.session.cart.orderId,
-                    productId: id
+                    quantity : 1,
+                    orderId : req.session.cart.orderId,
+                    productId : id
                 })
+            }         
 
+            req.session.cart.total = req.session.cart.products.map(product => product.price * product.quantity).reduce((a,b) => a + b, 0)
 
-            }
-            req.session.total = req.session.cart.products.map(product => product.price * quantity).reduce((a, b) => a + b, 0)
 
             return res.status(200).json({
-                ok: true,
-                cart: req.session.cart,
-                message: "Producto agregado exitosamente"
+                ok : true,
+                cart : req.session.cart,
+                message : "Producto agregado exitosamente"
             })
-
-
-
+            
         } catch (error) {
             console.log(error);
             return res.status(error.status || 500).json({
-                ok: false,
-                cart: null,
-                message: error.message || 'Upss, hubo un error'
+                ok : false,
+                cart : null,
+                message : error.message || 'Upss, hubo un error'
             })
-
         }
-
     },
-
-    removeItem: async (req, res) => {
+    removeItem : async (req,res) => {
 
         try {
 
-            if (!req.session.cart) {
+            if(!req.session.cart) {
                 let error = new Error()
                 error.message = 'Debes loguearte';
                 error.status = 404;
                 throw error
             }
 
-            const { product: id } = req.query;
+            const {product : id} = req.query;
 
             req.session.cart.products = req.session.cart.products.map(product => {
-                if (product.id === +id && product.quantity > 1) {
+                if(product.id === +id && product.quantity > 1){
                     --product.quantity
                 }
                 return product
             });
 
-            /* base de datos */
-            await db.Item.update(
+              /* base de datos */
+              await db.Item.update(
                 {
-                    quantity: req.session.cart.products.find(product => product.id === +id).quantity
+                    quantity :  req.session.cart.products.find(product => product.id === +id).quantity
                 },
                 {
-                    where: {
-                        orderId: req.session.cart.orderId,
-                        productId: id
+                    where : {
+                        orderId : req.session.cart.orderId,
+                        productId : id
                     }
                 }
             )
 
-            req.session.cart.total = req.session.cart.products.map(product => product.price * product.quantity).reduce((a, b) => a + b, 0)
+            req.session.cart.total = req.session.cart.products.map(product => product.price * product.quantity).reduce((a,b) => a + b, 0)
 
             return res.status(200).json({
-                ok: true,
-                cart: req.session.cart,
-                message: "Producto eliminado exitosamente"
+                ok : true,
+                cart : req.session.cart,
+                message : "Producto eliminado exitosamente"
             })
-
+            
         } catch (error) {
             console.log(error);
             return res.status(error.status || 500).json({
-                ok: false,
-                cart: null,
-                message: error.message || 'Upss, hubo un error'
+                ok : false,
+                cart : null,
+                message : error.message || 'Upss, hubo un error'
             })
         }
 
     },
-    removeAllItem: async (req, res) => {
+    removeAllItem : async (req,res) => {
         try {
-            if (!req.session.cart) {
+            if(!req.session.cart) {
                 let error = new Error()
                 error.message = 'Debes loguearte';
                 error.status = 404;
                 throw error
             }
 
-            const { product: id } = req.query;
+            const {product : id} = req.query;
 
-            req.session.cart.products = req.session.cart.products.filter(product => product.id !== +id);
+            req.session.cart.products = req.session.cart.products.filter(product => product.id !== +id );
 
             /* base de datos */
-            await db.Item.destroy(
+              await db.Item.destroy(
                 {
-                    where: {
-                        orderId: req.session.cart.orderId,
-                        productId: id
+                    where : {
+                        orderId : req.session.cart.orderId,
+                        productId : id
                     }
                 }
             )
 
-            req.session.cart.total = req.session.cart.products.map(product => product.price * product.quantity).reduce((a, b) => a + b, 0)
+            req.session.cart.total = req.session.cart.products.map(product => product.price * product.quantity).reduce((a,b) => a + b, 0)
 
             return res.status(200).json({
-                ok: true,
-                cart: req.session.cart,
-                message: "Producto eliminado exitosamente"
+                ok : true,
+                cart : req.session.cart,
+                message : "Producto eliminado exitosamente"
             })
-
+            
         } catch (error) {
             console.log(error);
             return res.status(error.status || 500).json({
-                ok: false,
-                cart: null,
-                message: error.message || 'Upss, hubo un error'
+                ok : false,
+                cart : null,
+                message : error.message || 'Upss, hubo un error'
             })
         }
     },
 
-    emptyCart: async (req, res) => {
+    emptyCart : async (req,res) => {
         try {
 
-            if (!req.session.cart) {
+            if(!req.session.cart) {
                 let error = new Error()
                 error.message = 'Debes loguearte';
                 error.status = 404;
                 throw error
             }
 
-            req.session.cart = {
+              req.session.cart = {
                 ...req.session.cart,
-                products: [],
-                total: 0,
+                products : [],
+                total : 0,
             }
 
-            /* base de datos */
-            await db.Item.destroy(
+              /* base de datos */
+              await db.Item.destroy(
                 {
-                    where: {
-                        orderId: req.session.cart.orderId,
+                    where : {
+                        orderId : req.session.cart.orderId,
                     }
                 }
             )
 
             return res.status(200).json({
-                ok: true,
-                cart: req.session.cart,
-                message: "Carrito vaciado"
+                ok : true,
+                cart : req.session.cart,
+                message : "Carrito vaciado"
             })
-
+            
         } catch (error) {
             console.log(error);
             return res.status(error.status || 500).json({
-                ok: false,
-                cart: null,
-                message: error.message || 'Upss, hubo un error'
+                ok : false,
+                cart : null,
+                message : error.message || 'Upss, hubo un error'
             })
         }
     }
