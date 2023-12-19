@@ -5,6 +5,7 @@ window.onload =function(){
     $('name').addEventListener('focus', function(e){
         $('msgError-name').innerHTML = null
                 this.classList.remove('is-invalid')
+                this.classList.remove('is-valid')
 
     })
 
@@ -40,7 +41,7 @@ window.onload =function(){
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-surname').innerHTML = "El apellido es obligatorio"
+                $('msgError-surname').innerHTML = "El apellido es obligatorio.JS"
                 this.classList.add('is-invalid')
                 break;
             case this.value.trim().length < 2:
@@ -69,7 +70,7 @@ window.onload =function(){
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-email').innerHTML = "El email es obligatorio"
+                $('msgError-email').innerHTML = "El email es obligatorio.JS"
                 this.classList.add('is-invalid')
                 break;
             case !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.value.trim()):
@@ -112,7 +113,7 @@ window.onload =function(){
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-password').innerHTML = "La contraseña es obligatoria"
+                $('msgError-password').innerHTML = "La contraseña es obligatoria.JS"
                 this.classList.add('is-invalid')
                 break;
             case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,12}$/.test(this.value.trim()):
@@ -154,7 +155,7 @@ window.onload =function(){
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-password2').innerHTML = "Debes confirmar tu contraseña"
+                $('msgError-password2').innerHTML = "Debes confirmar tu contraseña.JS"
                 this.classList.add('is-invalid')
                 break;
             case this.value.trim() !== $('password').value.trim():

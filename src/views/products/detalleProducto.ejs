@@ -48,8 +48,8 @@
                 </div>
                 
                 <div class="col-12 d-flex flex-column gap-3">
-                  <button  type="button" class="btn btn-primary">COMPRAR AHORA</button>
-                  <button type="button" class="btn btn-light buy-now-button">AGREGAR AL CARRITO</button>
+                  <button  type="button" onclick="addItemToCart(1,'<%=product.id%>')" class="btn btn-primary">COMPRAR AHORA</button>
+                  <button type="button"  class="btn btn-light buy-now-button">AGREGAR AL CARRITO</button>
                 </div>
                 
                 
@@ -64,7 +64,7 @@
 
       
     </main>  
-
+    <%- include('../partials/scripts') %>
     <%- include('../partials/footer') %>
     <%- include('../components/scriptSlider') %>
     
