@@ -24,14 +24,14 @@ DROP TABLE IF EXISTS `addresses`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `addresses` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `street` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
   `city` varchar(255) DEFAULT NULL,
   `province` varchar(255) DEFAULT NULL,
   `userId` int DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `addresses` (
 
 LOCK TABLES `addresses` WRITE;
 /*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
-INSERT INTO `addresses` VALUES (1,NULL,NULL,NULL,3,'2023-12-19 02:56:32','2023-12-19 02:56:32'),(2,NULL,NULL,NULL,4,'2023-12-20 00:36:08','2023-12-20 00:36:08');
+INSERT INTO `addresses` VALUES (1,NULL,NULL,NULL,3,'2023-12-19 02:56:32','2023-12-19 02:56:32'),(2,NULL,NULL,NULL,4,'2023-12-20 00:36:08','2023-12-20 00:36:08'),(3,NULL,NULL,NULL,5,'2023-12-20 10:45:35','2023-12-20 10:45:35');
 /*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -199,7 +199,7 @@ CREATE TABLE `orders` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -208,7 +208,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,0,4,1,'2023-12-20 00:36:15','2023-12-20 00:36:15');
+INSERT INTO `orders` VALUES (1,0,4,1,'2023-12-20 00:36:15','2023-12-20 00:36:15'),(2,0,5,1,'2023-12-20 10:45:42','2023-12-20 10:45:42'),(3,0,1,1,'2023-12-20 11:15:15','2023-12-20 11:15:15');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -369,7 +369,7 @@ CREATE TABLE `users` (
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -378,7 +378,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Admin','Almacen','admin@gmail.com','$2a$10$rp6kJ76QSkFRDR7OhE6Gse.HTXWTD9q2lbnuv//Ag6TbG//MjJ1Mi',NULL,NULL,NULL,NULL,1,'2023-10-30 05:08:14','2023-10-30 05:08:14'),(2,'User','Almacen','user@gmail.com','$2a$10$ITSbKT5b8t96EUNxpE9nxOIXPvHZMqZddWy4mTjQkVlul0uqN/ezW',NULL,NULL,NULL,NULL,2,'2023-10-30 05:08:14','2023-10-30 05:08:14');
+INSERT INTO `users` VALUES (1,'Admin','Almacen','admin@gmail.com','$2a$10$rp6kJ76QSkFRDR7OhE6Gse.HTXWTD9q2lbnuv//Ag6TbG//MjJ1Mi',NULL,NULL,NULL,NULL,1,'2023-10-30 05:08:14','2023-10-30 05:08:14'),(2,'User','Almacen','user@gmail.com','$2a$10$ITSbKT5b8t96EUNxpE9nxOIXPvHZMqZddWy4mTjQkVlul0uqN/ezW',NULL,NULL,NULL,NULL,2,'2023-10-30 05:08:14','2023-10-30 05:08:14'),(5,'Hugo Hernan','Avallay','h40hugo@gmail.com','$2a$10$jqpW.lbJP.5yc.4shUwOmOYdPsy6VUkw7Ppd7ACv1iNtdPp/9sOtS',NULL,NULL,NULL,NULL,2,'2023-12-20 10:45:35','2023-12-20 10:45:35');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -391,4 +391,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-20  7:42:49
+-- Dump completed on 2023-12-20  9:57:54

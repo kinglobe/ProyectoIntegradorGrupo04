@@ -1,8 +1,35 @@
 const $ = (id) => document.getElementById(id);
-const textarea = document.querySelector('textarea');
+const textarea = document.getElementById('description');
 
 window.onload = function () {
-    textarea.addEventListener("focus", function (e) {
+     /* $("name").addEventListener("focus", function (e) {
+         $("msg-name").innerHTML = null;
+         this.classList.remove("is-invalid");
+     });
+  */
+    $('name').addEventListener("blur", function (e) {
+        switch (true) {
+            case !this.value.trim():
+                $("msg-name").innerHTML = "Debes ingresar un nombre";
+                this.classList.add("is-invalid");
+                break;
+            case this.value.trim().length < 5:
+                $("msg-name").innerHTML = "Debes ingresar como minimo 5 caracteres";
+                this.classList.add("is-invalid");
+                break;
+            case !/^[a-zA-Z0-9\s]*$/.test(this.value.trim()):
+                $("msg-name").innerHTML = "Solo se permiten letras y números";
+                this.classList.add("is-invalid");
+                break;
+            default:
+                $("msg-name").innerHTML = null;
+                this.classList.add("is-valid");
+                this.classList.remove("is-invalid");
+                break;
+        }
+    });
+
+    /* textarea.addEventListener("focus", function (e) {
         window.addEventListener("keyup", function (e) {
             let liveKey = textarea.value.length;
             let textareaValue = textarea.value;
@@ -18,9 +45,9 @@ window.onload = function () {
 
         $("msg-description").innerHTML = null;
         this.classList.remove("is-invalid");
-    });
+    }); */
 
-    textarea.addEventListener("blur", function (e) {
+   /*  textarea.addEventListener("blur", function (e) {
         switch (true) {
             case !/^[a-zA-Z0-9\s]*$/.test(this.value.trim()):
                 $("msg-description").innerHTML = "Solo se permiten letras y números";
@@ -46,32 +73,7 @@ window.onload = function () {
         }
     });
 
-    $("formName").addEventListener("focus", function (e) {
-        $("msg-name").innerHTML = null;
-        this.classList.remove("is-invalid");
-    });
 
-    $("formName").addEventListener("blur", function (e) {
-        switch (true) {
-            case !this.value.trim():
-                $("msg-name").innerHTML = "Debes ingresar un nombre";
-                this.classList.add("is-invalid");
-                break;
-            case this.value.trim().length < 5:
-                $("msg-name").innerHTML = "Debes ingresar como minimo 5 caracteres";
-                this.classList.add("is-invalid");
-                break;
-            case !/^[a-zA-Z0-9\s]*$/.test(this.value.trim()):
-                $("msg-name").innerHTML = "Solo se permiten letras y números";
-                this.classList.add("is-invalid");
-                break;
-            default:
-                $("msg-name").innerHTML = null;
-                this.classList.add("is-valid");
-                this.classList.remove("is-invalid");
-                break;
-        }
-    });
     $("brand").addEventListener("focus", function (e) {
         $("msg-brand").innerHTML = null;
         this.classList.remove("is-invalid");
@@ -157,34 +159,22 @@ window.onload = function () {
                 this.classList.remove("is-invalid");
                 break;
         }
-    });
+    }); */
 
-    $("stock").addEventListener("focus", function (e) {
-        $("msg-stock").innerHTML = null;
-        this.classList.remove("is-invalid");
-    });
+    $("productAdd").addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    $("stock").addEventListener("blur", function (e) {
-        switch (true) {
-            case !this.value:
-                $("msg-stock").innerHTML = "Se debe indicar el stock disponible";
-                this.classList.add("is-invalid");
-                break;
-            case !/^[0-9]+$/.test(this.value.trim()):
-                $("msg-stock").innerHTML = "Recuerda que debe ser un número (unidades)";
-                this.classList.add("is-invalid");
-                break;
-            case this.value <= 0:
-                $("msg-stock").innerHTML = "El numero no puede ser negativo";
-                this.classList.add("is-invalid");
-                break;
+        const elementsFormProduct = this.elements;
+        let error = false;
 
-            default:
-                $("msg-stock").innerHTML = null;
-                this.classList.add("is-valid");
-                this.classList.remove("is-invalid");
-                break;
+        for (let i = 0; i < elementsFormProduct.length; i++) {
+            if (elementsFormProduct[i].classList.contains("is-invalid")) {
+                error = true;
+                elementsFormProduct[i].classList.add("is-invalid");
+                $("msg-description").innerHTML = "Por favor verifique el formulario";
+            }
         }
-    })
 
+        !error && this.submit();
+    });
 }
