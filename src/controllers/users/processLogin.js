@@ -13,17 +13,7 @@ module.exports = (req, res) => {
         email
       },
       include : ['favorites']
-    })
-
-    if(errors.isEmpty()){
-        const {email, remember} = req.body
-
-        db.User.findOne({
-            where : {
-                email
-            }
-        })
-      .then(user => {
+    }).then(user => {
         req.session.userLogin = {
           id : user.id,
           name: user.name,
@@ -102,4 +92,4 @@ module.exports = (req, res) => {
   }
 
 }
-}
+
